@@ -1,0 +1,23 @@
+- type: entity
+  name: Пушистые Наручники
+  description: Мягкие наручники
+  id: HandcuffsBDSM
+  parent: BaseItem
+  components:
+  - type: Item
+    size: 3
+  - type: Handcuff
+    cuffedRSI: AMeowStat\handcuffsBDSM.rsi
+    bodyIconState: body-overlay
+  - type: Sprite
+    sprite: AMeowStat\handcuffsBDSM.rsi
+    state: handcuff
+  - type: Tag
+    tags:
+    - Handcuffs
+  - type: MeleeWeapon
+    resetOnHandSelected: false
+    animation: WeaponArcDisarm
+    damage:
+      types:
+        Blunt: 0

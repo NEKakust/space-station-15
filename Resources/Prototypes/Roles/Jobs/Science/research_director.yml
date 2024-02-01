@@ -6,9 +6,9 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Science
-      time: 54000 #15 hrs # Corvax-RoleTime
+      time: 43200 #12 hrs # Corvax-RoleTime
 #    - !type:OverallPlaytimeRequirement
-#      time: 144000 #40 hrs
+#      time: 72000 #20 hrs
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"
@@ -20,7 +20,6 @@
   - Command
   - Maintenance
   - ResearchDirector
-  - Brig
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

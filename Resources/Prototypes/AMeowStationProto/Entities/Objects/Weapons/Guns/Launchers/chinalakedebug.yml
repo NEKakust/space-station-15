@@ -1,0 +1,18 @@
+- type: entity
+  name: China Lake [Debug]
+  parent: WeaponLauncherChinaLake
+  id: WeaponLauncherChinaLakeDebug
+  description: РАТАТАТА
+  components:
+  - type: Gun
+    fireRate: 75
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - Grenade
+    capacity: 1500
+    unspawnedcount: 1500
+    proto: GrenadeFrag

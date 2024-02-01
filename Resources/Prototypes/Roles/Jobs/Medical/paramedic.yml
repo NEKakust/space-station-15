@@ -6,9 +6,9 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobMedicalDoctor
-      time: 14400 #4 hrs
+      time: 10800 #3 hrs
     - !type:OverallPlaytimeRequirement
-      time: 54000 # 15 hrs
+      time: 36000 # 10 hrs
   startingGear: ParamedicGear
   icon: "JobIconParamedic"
   supervisors: job-supervisors-cmo
@@ -22,11 +22,11 @@
   id: ParamedicGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitParamedic
-    back: ClothingBackpackParamedicFilled
-    shoes: ClothingShoesColorBlue
+    back: ClothingBackpackMedicalFilled
+    shoes: ClothingShoesColorWhite
     id: ParamedicPDA
     ears: ClothingHeadsetMedical
     belt: ClothingBeltParamedicFilled
   innerClothingSkirt: ClothingUniformJumpskirtParamedic
-  satchel: ClothingBackpackSatchelParamedicFilled
-  duffelbag: ClothingBackpackDuffelParamedicFilled
+  satchel: ClothingBackpackSatchelMedicalFilled
+  duffelbag: ClothingBackpackDuffelMedicalFilled

@@ -6,7 +6,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 108000 #50 hrs # Corvax-RoleTime
+      time: 36000 #10 hrs # Corvax-RoleTime
   startingGear: WardenGear
   icon: "JobIconWarden"
   supervisors: job-supervisors-hos
@@ -29,8 +29,8 @@
     head: ClothingHeadHatWarden
     jumpsuit: ClothingUniformJumpsuitWarden
     back: ClothingBackpackSecurityFilled
-    shoes: ClothingShoesBootsJackSecFilled # Corvax-Resprite
-    eyes: ClothingEyesGlassesSunglasses
+    shoes: ClothingShoesBootsJackSec # Corvax-Resprite
+    eyes: ClothingEyesGlassesSecurity
     outerClothing: ClothingOuterCoatWarden
     id: WardenPDA
     ears: ClothingHeadsetSecurity

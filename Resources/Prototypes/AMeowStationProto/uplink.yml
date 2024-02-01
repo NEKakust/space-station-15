@@ -1,0 +1,77 @@
+# Proto
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesBootsMagClown
+  name: клоунские туфли
+  suffix: Магнитные
+  description: Стандартные клоунские туфли. Чертовски огромные!
+  components:
+  - type: Sprite
+    sprite: Clothing/Shoes/Specific/clown.rsi
+    state: icon
+  - type: Clothing
+    sprite: Clothing/Shoes/Specific/clown.rsi
+  - type: Magboots
+    toggleAction: ActionToggleMagbootsClown
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.9
+    enabled: false
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      # 2 minutes of thrust
+      volume: 0.75
+      temperature: 293.15
+      moles:
+        - 0.153853429 # oxygen
+        - 0.153853429 # nitrogen
+  - type: ActivatableUI
+    key: enum.SharedGasTankUiKey.Key
+  - type: UserInterface
+    interfaces:
+      - key: enum.SharedGasTankUiKey.Key
+        type: GasTankBoundUserInterface
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 20
+  - type: Jetpack
+    moleUsage: 0.00075
+  - type: CanMoveInAir
+  - type: InputMover
+    toParent: true
+  - type: MovementSpeedModifier
+    weightlessAcceleration: 1
+    weightlessFriction: 0.3
+    weightlessModifier: 1.2
+  - type: Tag
+    tags:
+      - WhitelistChameleon
+
+# uplink
+
+- type: listing
+  id: UplinkClothingShoesBootsMagClown
+  name: Клоунские магнитные ботинки
+  description: с виду идентичны обычным клоунским ботинкам. Имеют функционал магнитных ботинок синдиката.
+  productEntity: ClothingShoesBootsMagClown
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkJob
+  conditions:
+  - !type:BuyerJobCondition
+    whitelist:
+    - Clown
+    - Mime
+    
+# toggle switch texture but actually dont
+
+- type: entity
+  id: ActionToggleMagbootsClown
+  parent: ActionBaseToggleMagboots
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Clothing/Shoes/Specific/clown.rsi, state: icon }
+    iconOn: { sprite : Clothing/Shoes/Specific/clown.rsi, state: icon }

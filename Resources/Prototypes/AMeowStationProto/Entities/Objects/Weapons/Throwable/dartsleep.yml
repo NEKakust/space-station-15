@@ -1,0 +1,52 @@
+- type: entity
+  parent: Dart
+  id: DartSleep
+  name: Усыпляющий Дротик
+  description: Кинув его в противника он моментально заснёт.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        reagents:
+        - ReagentId: Nocturine
+          Quantity: 10
+  - type: MeleeChemicalInjector
+    solution: melee
+  - type: RefillableSolution
+    solution: melee
+  - type: InjectableSolution
+    solution: melee
+  - type: SolutionInjectOnCollide
+    transferAmount: 10
+    blockSlots: OUTERCLOTHING
+  - type: SolutionTransfer
+    maxTransferAmount: 10
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 4
+        Piercing: 6
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1 #excess damage avoids cost of spawning entities.
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PartRodMetal1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
