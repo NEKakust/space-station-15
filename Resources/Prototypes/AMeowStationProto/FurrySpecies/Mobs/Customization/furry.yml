@@ -1,0 +1,179 @@
+- type: marking
+  id: CatEarsFurry
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Furry]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      ears_cat_inner:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/cat_parts.rsi
+    state: ears_cat_outer
+  - sprite: AMeowStat/FurrySpecies/Customization/cat_parts.rsi
+    state: ears_cat_inner
+
+- type: marking
+  id: FoxEarsFurry
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Furry]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      fox_dop:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/foxears.rsi
+    state: fox_ears
+  - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/foxears.rsi
+    state: fox_dop
+
+- type: marking
+  id: BunnyEarsFurry
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  forcedColoring: true
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/bunnyears.rsi
+    state: bunny_ears
+
+- type: marking
+  id: DogEarsFurry
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  forcedColoring: true
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/dogears.rsi
+    state: dog_ears
+
+- type: marking
+  id: CatTailFurry
+  bodyPart: Tail
+  markingCategory: Tail
+  forcedColoring: true
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/cat_parts.rsi
+    state: tail_cat_wag
+
+- type: marking
+  id: FoxTailFurry
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Furry]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      tail_fox_dop:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/foxtail.rsi
+    state: tail_fox
+  - sprite: AMeowStat/FurrySpecies/Customization/foxtail.rsi
+    state: tail_fox_dop
+
+- type: marking
+  id: SharkTailFurry
+  bodyPart: Tail
+  markingCategory: Tail
+  forcedColoring: true
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/sharktail.rsi
+    state: tail_shark
+
+- type: marking
+  id: DogTailFurry
+  bodyPart: Tail
+  markingCategory: Tail
+  forcedColoring: true
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/dogtail.rsi
+    state: tail_dog
+
+- type: marking
+  id: BunnyTailFurry
+  bodyPart: Tail
+  markingCategory: Tail
+  forcedColoring: true
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/bunnytail.rsi
+    state: tail_bunny
+
+- type: marking
+  id: ShortTailFurry
+  bodyPart: Tail
+  markingCategory: Tail
+  forcedColoring: true
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/shorttail.rsi
+    state: tail_short
+
+
+- type: marking
+  id: SnoutFurryBase
+  bodyPart: Snout
+  markingCategory: Snout
+  forcedColoring: true
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/SnoutFurry/snoutmaw.rsi
+    state: maw
+
+- type: marking
+  id: SnoutFoxFurry
+  bodyPart: Snout
+  markingCategory: Snout
+  forcedColoring: true
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/SnoutFurry/snoutfox.rsi
+    state: fox
+
+- type: marking
+  id: SnoutToothyFurry
+  bodyPart: Snout
+  markingCategory: Snout
+  forcedColoring: true
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/SnoutFurry/snouttoothy.rsi
+    state: toothy
+
+- type: marking
+  id: SnoutProtogenFurry
+  bodyPart: Snout
+  markingCategory: Snout
+  forcedColoring: true
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/SnoutFurry/snoutprotogen.rsi
+    state: protogen

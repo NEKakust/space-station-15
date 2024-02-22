@@ -1,0 +1,14 @@
+- type: vendingMachineInventory
+  id: FurryMatItem
+  startingInventory:
+    ClothingUniformJumpskirtJanimaidmini: 4
+    ClothingHeadHatCatEars: 4
+    ClothingHeadHatCatEarsBlack: 4
+    ClothingHandsWhiteMeowGloves: 3
+    ClothingHandsBlackMeowGloves: 3
+    ClothingUnderSocksBlueFurry: 3
+    ClothingUnderSocksGreenFurry: 3
+    ClothingUnderSocksRedFurry: 3
+    ClothingUnderSocksPurpleFurry: 3
+  emaggedInventory:
+    ClothingMaskMuzzle: 2
