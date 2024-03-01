@@ -3,6 +3,21 @@
   name: job-name-centcomoff
   description: job-description-centcomoff
   playTimeTracker: JobCentralCommandOfficial
+    requirements:
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 36000 #10 hrs # Meow-RoleTime
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 36000 #10 hrs # Meow-RoleTime
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 36000 #10 hrs # Meow-RoleTime
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 27000 # 7.5 hours
+    - !type:OverallPlaytimeRequirement
+      time: 251000 #70 hrs # Meow-RoleTime
   setPreference: false
   startingGear: CentcomGear
   icon: "JobIconNanotrasen"

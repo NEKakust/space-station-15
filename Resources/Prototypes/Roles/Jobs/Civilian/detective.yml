@@ -6,10 +6,10 @@
   requirements:
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 36000 #10 hrs # Corvax-RoleTime
+    time: 18000 #10 hrs # Meow-RoleTime
   - !type:DepartmentTimeRequirement
     department: Civilian
-    time: 18000 # 5 hours
+    time: 9000 # 5 hours
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hop

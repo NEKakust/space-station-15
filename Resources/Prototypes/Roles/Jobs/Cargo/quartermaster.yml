@@ -9,12 +9,10 @@
       time: 11800 #3 hrs
     - !type:RoleTimeRequirement
       role: JobSalvageSpecialist
-      time: 36000 #10 hrs # Corvax-RoleTime
+      time: 18000 #15 hrs # Meow-RoleTime
     - !type:DepartmentTimeRequirement
       department: Cargo
-      time: 36000 #7.5 hrs # Corvax-RoleTime
-    - !type:OverallPlaytimeRequirement
-      time: 72000 #20 hrs
+      time: 27000 #7.5 hrs # Meow-RoleTime
   weight: 10
   startingGear: QuartermasterGear
   icon: "JobIconQuarterMaster"

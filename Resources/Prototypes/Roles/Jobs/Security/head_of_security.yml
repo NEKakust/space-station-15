@@ -6,10 +6,13 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobWarden
+      time: 18000 #5 hrs # Meow-RoleTime
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
       time: 18000 #5 hrs
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 54000 #25 hrs
+      time: 54000 #25 hrs # Meow-RoleTime
     - !type:OverallPlaytimeRequirement
       time: 72000 #20 hrs
   weight: 10

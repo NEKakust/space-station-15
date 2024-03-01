@@ -1,7 +1,7 @@
 tiles-space = космос
 tiles-plating = покрытие
 tiles-lattice = решётка
-tiles-lattice-train = train lattice
+tiles-lattice-train = решётка поезда
 tiles-steel-floor = стальной пол
 tiles-steel-floor-mini = стальные мини-плиты
 tiles-steel-floor-pavement = стальное покрытие
@@ -120,3 +120,4 @@ tiles-web = паутинный пол
 tiles-chromite = хромитовый пол
 tiles-astro-grass = астро-трава
 tiles-astro-ice = астро-лёд
+tiles-wood-large = большой деревянный пол
