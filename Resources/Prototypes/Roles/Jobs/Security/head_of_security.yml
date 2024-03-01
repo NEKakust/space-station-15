@@ -12,7 +12,7 @@
       time: 18000 #5 hrs
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 540000 #25 hrs # Meow-RoleTime
+      time: 54000 #25 hrs # Meow-RoleTime
     - !type:OverallPlaytimeRequirement
       time: 72000 #20 hrs
   weight: 10

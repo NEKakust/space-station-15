@@ -6,18 +6,18 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 36000 #10 hrs # Meow-RoleTime
+      time: 36000 #10 hrs
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 36000 #10 hrs # Meow-RoleTime
+      time: 36000 #10 hrs
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 36000 #10 hrs # Meow-RoleTime
+      time: 36000 #10 hrs
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 27000 # 7.5 hours
+      time: 54000 # 15 hours
     - !type:OverallPlaytimeRequirement
-      time: 251000 #70 hrs # Meow-RoleTime
+      time: 252000 #70hrs
   weight: 20
   startingGear: CaptainGear
   icon: "JobIconCaptain"

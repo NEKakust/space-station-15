@@ -6,15 +6,15 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobAtmosphericTechnician
-      time: 18000 #5 hrs # Meow-RoleTime
+      time: 18000 #5 hrs
     - !type:RoleTimeRequirement
       role: JobStationEngineer
-      time: 10000 #idk
+      time: 10800 #3 hrs
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 27000 #7.5 hrs # Meow-RoleTime
+      time: 27000 #7.5 hrs
     - !type:OverallPlaytimeRequirement
-      time: 72000 #20 hrs
+      time: 36000 #20 hrs
   weight: 10
   startingGear: ChiefEngineerGear
   icon: "JobIconChiefEngineer"
