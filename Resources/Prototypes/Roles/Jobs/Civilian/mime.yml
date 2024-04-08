@@ -5,7 +5,7 @@
   playTimeTracker: JobMime
   requirements:
   - !type:OverallPlaytimeRequirement
-      time: 90000 #25 hrs # Corvax-RoleTime
+      time: 45000 #12.5 hrs # Meow-RoleTime
   startingGear: MimeGear
   icon: "JobIconMime"
   supervisors: job-supervisors-hop
