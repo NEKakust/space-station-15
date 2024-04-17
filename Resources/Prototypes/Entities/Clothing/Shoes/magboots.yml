@@ -5,12 +5,12 @@
   description: Magnetic boots, often used during extravehicular activity to ensure the user remains safely attached to the vehicle.
   components:
     - type: Sprite
-      sprite: Clothing/Shoes/Boots/magboots.rsi
+      sprite: Clothing/Shoes/Boots/Magboots.rsi
       layers:
       - state: icon
         map: [ "enum.ToggleVisuals.Layer" ]
     - type: Clothing
-      sprite: Clothing/Shoes/Boots/magboots.rsi
+      sprite: Clothing/Shoes/Boots/Magboots.rsi
     - type: Magboots
     - type: ClothingSpeedModifier
       walkModifier: 0.85
