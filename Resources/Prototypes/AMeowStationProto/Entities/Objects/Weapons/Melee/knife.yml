@@ -1,5 +1,5 @@
 - type: entity
-  name: Нож Потрошителя
+  name: нож Потрошителя
   parent: BaseKnife
   id: KnifeEviscerator
   description: Нож легендарного "Потрошителя" который уничтожил станцию 13... Вы ещё о нём услышите...
