@@ -40,3 +40,13 @@ marking-SnoutToothyFurry-toothy = Зубастая фурри-мордочка
 
 marking-SnoutProtogenFurry = Протоген фурри-мордочка
 marking-SnoutProtogenFurry-protogen = Протоген фурри-мордочка
+marking-SnoutProtogenFurry-protogen_1 = Лицо Протогена
+marking-SnoutProtogenFurry-protogen_2 = Уши Протогена
+
+marking-TattooEyeLeftFurry = Левый глаз
+marking-TattooEyeLeftFurry-tattoo_eye_l = Левый глаз
+marking-TattooEyeRightFurry = Правый глаз
+marking-TattooEyeRightFurry-tattoo_eye_r = Правый глаз
+
+marking-ElfEars = Уши эльфа
+marking-ElfEars-elf_ears = Уши эльфа

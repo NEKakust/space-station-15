@@ -8,15 +8,7 @@
   },
   "states": [
     {
-      "name": "protogen",
-      "directions": 4
-    },
-    {
-      "name": "protogen_1",
-      "directions": 4
-    },
-    {
-      "name": "protogen_2",
+      "name": "elf_ears",
       "directions": 4
     }
   ]

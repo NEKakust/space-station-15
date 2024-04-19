@@ -1,3 +1,5 @@
+####################################Ушки##################################################
+
 - type: marking
   id: CatEarsFurry
   bodyPart: HeadTop
@@ -48,7 +50,6 @@
   id: BunnyEarsFurry
   bodyPart: HeadTop
   markingCategory: HeadTop
-  forcedColoring: true
   speciesRestriction: [Furry]
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/bunnyears.rsi
@@ -58,21 +59,33 @@
   id: DogEarsFurry
   bodyPart: HeadTop
   markingCategory: HeadTop
-  forcedColoring: true
   speciesRestriction: [Furry]
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/dogears.rsi
     state: dog_ears
 
+####################################Хвосты##################################################
+
+
 - type: marking
   id: CatTailFurry
   bodyPart: Tail
   markingCategory: Tail
-  forcedColoring: true
   speciesRestriction: [Furry]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/cat_parts.rsi
     state: tail_cat_wag
+  - sprite: AMeowStat/FurrySpecies/Customization/cat_parts.rsi
+    state: tail_cat_wag2
 
 - type: marking
   id: FoxTailFurry
@@ -101,7 +114,6 @@
   id: SharkTailFurry
   bodyPart: Tail
   markingCategory: Tail
-  forcedColoring: true
   speciesRestriction: [Furry]
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/sharktail.rsi
@@ -111,7 +123,6 @@
   id: DogTailFurry
   bodyPart: Tail
   markingCategory: Tail
-  forcedColoring: true
   speciesRestriction: [Furry]
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/dogtail.rsi
@@ -121,7 +132,6 @@
   id: BunnyTailFurry
   bodyPart: Tail
   markingCategory: Tail
-  forcedColoring: true
   speciesRestriction: [Furry]
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/bunnytail.rsi
@@ -131,18 +141,19 @@
   id: ShortTailFurry
   bodyPart: Tail
   markingCategory: Tail
-  forcedColoring: true
   speciesRestriction: [Furry]
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/shorttail.rsi
     state: tail_short
 
 
+################################Мордочки##########################################
+
+
 - type: marking
   id: SnoutFurryBase
   bodyPart: Snout
   markingCategory: Snout
-  forcedColoring: true
   speciesRestriction: [Furry]
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/SnoutFurry/snoutmaw.rsi
@@ -152,7 +163,6 @@
   id: SnoutFoxFurry
   bodyPart: Snout
   markingCategory: Snout
-  forcedColoring: true
   speciesRestriction: [Furry]
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/SnoutFurry/snoutfox.rsi
@@ -162,7 +172,6 @@
   id: SnoutToothyFurry
   bodyPart: Snout
   markingCategory: Snout
-  forcedColoring: true
   speciesRestriction: [Furry]
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/SnoutFurry/snouttoothy.rsi
@@ -172,8 +181,72 @@
   id: SnoutProtogenFurry
   bodyPart: Snout
   markingCategory: Snout
-  forcedColoring: true
   speciesRestriction: [Furry]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      protogen_1:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+      protogen_2:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/SnoutFurry/snoutprotogen.rsi
     state: protogen
+  - sprite: AMeowStat/FurrySpecies/Customization/SnoutFurry/snoutprotogen.rsi
+    state: protogen_1
+  - sprite: AMeowStat/FurrySpecies/Customization/SnoutFurry/snoutprotogen.rsi
+    state: protogen_2
+
+
+####################################Глазки######################################
+
+- type: marking
+  id: TattooEyeRightFurry
+  bodyPart: Eyes
+  markingCategory: Head
+  speciesRestriction: [Furry]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: Mobs/Customization/tattoos.rsi
+    state: tattoo_eye_r
+
+- type: marking
+  id: TattooEyeLeftFurry
+  bodyPart: Eyes
+  markingCategory: Head
+  speciesRestriction: [Furry]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: Mobs/Customization/tattoos.rsi
+    state: tattoo_eye_l
+
+
+##############################Не относится к фурри######################################
+
+- type: marking
+  id: ElfEars
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human, Dwarf]
+  followSkinColor: true
+  forcedColoring: true
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/elfears.rsi
+    state: elf_ears
