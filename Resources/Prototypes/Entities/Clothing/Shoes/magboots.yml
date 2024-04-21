@@ -14,7 +14,7 @@
     - type: Magboots
     - type: ClothingSpeedModifier
       walkModifier: 0.85
-      sprintModifier: 0.8
+      sprintModifier: 0.85
       enabled: false
     - type: Appearance
     - type: GenericVisualizer
