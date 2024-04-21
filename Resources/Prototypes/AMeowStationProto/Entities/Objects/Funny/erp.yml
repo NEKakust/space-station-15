@@ -20,13 +20,13 @@
 #knot
 - type: entity
   parent: BaseFunny
-  id: DildoHuman1Red
+  id: DildoKnotted1Red
   components:
   - type: Sprite
     layers:
     - state: icon
       color: "#320a18"
-    - state: knotted1-icon
+    - state: dildo_knotted_1
   - type: Item
     inhandVisuals:
       left:
@@ -46,7 +46,7 @@
     layers:
     - state: icon
       color: "#003399"
-    - state: knotted1-icon
+    - state: dildo_knotted_1
   - type: Item
     inhandVisuals:
       left:
@@ -66,7 +66,7 @@
     layers:
     - state: icon
       color: "#36802d"
-    - state: knotted1-icon
+    - state: dildo_knotted_1
   - type: Item
     inhandVisuals:
       left:
@@ -86,17 +86,17 @@
     layers:
     - state: icon
       color: "#320a18"
-    - state: human1-icon
+    - state: dildo_human_1
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#320a18"
-      - state: human1-inhand-left
+      - state: dildo_human_1
       right:
       - state: inhand-right
         color: "#320a18"
-      - state: human1-inhand-right
+      - state: human_1-inhand-right
 
 - type: entity
   parent: BaseFunny
@@ -106,17 +106,17 @@
     layers:
     - state: icon
       color: "#003399"
-    - state: human1-icon
+    - state: dildo_human_1
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#003399"
-      - state: human1-inhand-left
+      - state: human_1-inhand-left
       right:
       - state: inhand-right
         color: "#003399"
-      - state: human1-inhand-right
+      - state: human_1-inhand-right
 
 - type: entity
   parent: BaseFunny
@@ -126,17 +126,17 @@
     layers:
     - state: icon
       color: "#36802d"
-    - state: human1-icon
+    - state: dildo_human_1
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#36802d"
-      - state: human1-inhand-left
+      - state: human_1-inhand-left
       right:
       - state: inhand-right
         color: "#36802d"
-      - state: human1-inhand-right
+      - state: human_1-inhand-right
 #plain
 - type: entity
   parent: BaseFunny
@@ -146,17 +146,17 @@
     layers:
     - state: icon
       color: "#320a18"
-    - state: plain1-icon
+    - state: dildo_plain_1
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#320a18"
-      - state: plain1-inhand-left
+      - state: plain_1-inhand-left
       right:
       - state: inhand-right
         color: "#320a18"
-      - state: plain1-inhand-right
+      - state: plain_1-inhand-right
 
 - type: entity
   parent: BaseFunny
@@ -166,17 +166,17 @@
     layers:
     - state: icon
       color: "#003399"
-    - state: plain1-icon
+    - state: dildo_plain_1
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#003399"
-      - state: plain1-inhand-left
+      - state: plain_1-inhand-left
       right:
       - state: inhand-right
         color: "#003399"
-      - state: plain1-inhand-right
+      - state: plain_1-inhand-right
 
 - type: entity
   parent: BaseFunny
@@ -186,17 +186,17 @@
     layers:
     - state: icon
       color: "#36802d"
-    - state: plain1-icon
+    - state: dildo_plain_1
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#36802d"
-      - state: plain1-inhand-left
+      - state: plain_1-inhand-left
       right:
       - state: inhand-right
         color: "#36802d"
-      - state: plain1-inhand-right
+      - state: plain_1-inhand-right
 #flared
 - type: entity
   parent: BaseFunny
@@ -206,17 +206,17 @@
     layers:
     - state: icon
       color: "#320a18"
-    - state: plain1-icon
+    - state: dildo_flared_1
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#320a18"
-      - state: plain1-inhand-left
+      - state: flared_1-inhand-left
       right:
       - state: inhand-right
         color: "#320a18"
-      - state: plain1-inhand-right
+      - state: flared_1-inhand-right
 
 - type: entity
   parent: BaseFunny
@@ -226,17 +226,17 @@
     layers:
     - state: icon
       color: "#003399"
-    - state: flared1-icon
+    - state: dildo_flared_1
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#003399"
-      - state: flared1-inhand-left
+      - state: flared_1-inhand-left
       right:
       - state: inhand-right
         color: "#003399"
-      - state: falred1-inhand-right
+      - state: falred_1-inhand-right
 
 - type: entity
   parent: BaseFunny
@@ -246,14 +246,14 @@
     layers:
     - state: icon
       color: "#36802d"
-    - state: flared1-icon
+    - state: dildo_flared_1
   - type: Item
     inhandVisuals:
       left:
       - state: inhand-left
         color: "#36802d"
-      - state: flared1-inhand-left
+      - state: flared_1-inhand-left
       right:
       - state: inhand-right
         color: "#36802d"
-      - state: flared1-inhand-right
+      - state: flared_1-inhand-right
