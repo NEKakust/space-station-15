@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Takem from https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13/commit/c9f882c3b4c1ecb0e7bd14dd861a978a85f294a5",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "DildoKnotted1"
+    },
+    {
+      "name": "DildoKnotted2"
+    },
+    {
+      "name": "DildoKnotted3"
+    },
+    {
+      "name": "DildoHuman1"
+    },
+    {
+      "name": "DildoHuman2"
+    },
+    {
+      "name": "DildoHuman3"
+    },
+    {
+      "name": "DildoPlain1"
+    },
+    {
+      "name": "DildoPlain2"
+    },
+    {
+      "name": "DildoPlain3"
+    },
+    {
+      "name": "DildoFlared1"
+    },
+    {
+      "name": "DildoFlared2"
+    },
+    {
+      "name": "DildoFlared3"
+    },
+    {
+      "name": "DildoFlared4"
+    },
+    {
+      "name": "DildoFlared5"
+    }
+  ]
+}
