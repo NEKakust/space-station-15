@@ -21,119 +21,167 @@
 - type: entity
   parent: BaseFunny
   id: DildoKnotted1Red
+  name: knotted dildo
+  suffix: Small, Red
+  description: size - small 
   components:
   - type: Sprite
     layers:
     - state: icon_knotted_1
       color: "#320a18"
     - state: dildo_knotted_1
+      color: "#320a18"
 
 - type: entity
   parent: BaseFunny
   id: DildoKnotted1Blue
+  name: knotted dildo
+  suffix: Small, Blue
+  description: size - small 
   components:
   - type: Sprite
     layers:
     - state: icon_knotted_1
       color: "#003399"
     - state: dildo_knotted_1
+      color: "#003399"
 
 - type: entity
   parent: BaseFunny
   id: DildoKnotted1Green
+  name: knotted dildo
+  suffix: Small, Green
+  description: size - small 
   components:
   - type: Sprite
     layers:
     - state: icon_knotted_1
       color: "#36802d"
     - state: dildo_knotted_1
+      color: "#36802d"
 #human
 - type: entity
   parent: BaseFunny
   id: DildoHuman1Red
+  name: human dildo
+  suffix: Small, Red
+  description: size - small 
   components:
   - type: Sprite
     layers:
     - state: icon_human_1
       color: "#320a18"
     - state: dildo_human_1
+      color: "#320a18"
 
 - type: entity
   parent: BaseFunny
   id: DildoHuman1Blue
+  name: human dildo
+  suffix: Small, Blue
+  description: size - small 
   components:
   - type: Sprite
     layers:
     - state: icon_human_1
       color: "#003399"
     - state: dildo_human_1
+      color: "#003399"
 
 - type: entity
   parent: BaseFunny
   id: DildoHuman1Green
+  name: human dildo
+  suffix: Small, Green
+  description: size - small 
   components:
   - type: Sprite
     layers:
     - state: icon_human_1
       color: "#36802d"
     - state: dildo_human_1
+      color: "#36802d"
 #plain
 - type: entity
   parent: BaseFunny
   id: DildoPlain1Red
+  name: plain dildo
+  suffix: Small, Red
+  description: size - small 
   components:
   - type: Sprite
     layers:
     - state: icon_plain_1
       color: "#320a18"
     - state: dildo_plain_1
+      color: "#320a18"
 
 - type: entity
   parent: BaseFunny
   id: DildoPlain1Blue
+  name: plain dildo
+  suffix: Small, Blue
+  description: size - small 
   components:
   - type: Sprite
     layers:
     - state: icon_plain_1
       color: "#003399"
     - state: dildo_plain_1
+      color: "#003399"
 
 - type: entity
   parent: BaseFunny
   id: DildoPlain1Green
+  name: plain dildo
+  suffix: Small, Green
+  description: size - small 
   components:
   - type: Sprite
     layers:
     - state: icon_plain_1
       color: "#36802d"
     - state: dildo_plain_1
+      color: "#36802d"
 #flared
 - type: entity
   parent: BaseFunny
   id: DildoFlared1Red
+  name: flared dildo
+  suffix: Small, Red
+  description: size - small 
   components:
   - type: Sprite
     layers:
     - state: icon_flared_1
       color: "#320a18"
     - state: dildo_flared_1
+      color: "#320a18"
 
 - type: entity
   parent: BaseFunny
   id: DildoFlared1Blue
+  name: flared dildo
+  suffix: Small, Blue
+  description: size - small 
   components:
   - type: Sprite
     layers:
     - state: icon_flared_1
       color: "#003399"
     - state: dildo_flared_1
+      color: "#003399"
 
 - type: entity
   parent: BaseFunny
   id: DildoFlared1Green
+  name: flared dildo
+  suffix: Small, Green
+  description: size - small 
   components:
   - type: Sprite
     layers:
     - state: icon_flared_1
       color: "#36802d"
     - state: dildo_flared_1
+      color: "#36802d"
