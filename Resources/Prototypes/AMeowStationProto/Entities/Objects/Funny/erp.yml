@@ -7,6 +7,7 @@
     size: Small
   - type: Sprite
     sprite: AMeowStat/Objects/Funy/erp.rsi
+    scale: 0.5, 0.5
   - type: UseDelay
     delay: 1.0
   - type: MeleeWeapon
@@ -16,8 +17,7 @@
         Blunt: 0
   - type: StaticPrice
     price: 5
-#1st size
-#knot
+#knotred
 - type: entity
   parent: BaseFunny
   id: DildoKnotted1Red
@@ -28,10 +28,92 @@
   - type: Sprite
     layers:
     - state: icon_knotted_1
-      color: "#320a18"
+      color: "#320A18"
+      scale: 0.5, 0.5
     - state: dildo_knotted_1
-      color: "#320a18"
+      color: "#320A18"
+      scale: 0.5, 0.5
 
+- type: entity
+  parent: BaseFunny
+  id: DildoKnotted2Red
+  name: knotted dildo
+  suffix: Normal, Red
+  description: size - normal 
+  components:
+  - type: Sprite
+    layers:
+    - state: icon_knotted_1
+      color: "#320A18"
+      scale: 0.55, 0.6
+    - state: dildo_knotted_1
+      color: "#320A18"
+      scale: 0.55, 0.6
+
+- type: entity
+  parent: BaseFunny
+  id: DildoKnotted3Red
+  name: knotted dildo
+  suffix: Big, Red
+  description: size - big 
+  components:
+  - type: Sprite
+    layers:
+    - state: icon_knotted_1
+      color: "#320A18"
+      scale: 0.6, 0.7
+    - state: dildo_knotted_1
+      color: "#320A18"
+      scale: 0.6, 0.7
+#knotgreen
+- type: entity
+  parent: BaseFunny
+  id: DildoKnotted1Green
+  name: knotted dildo
+  suffix: Small, Green
+  description: size - small 
+  components:
+  - type: Sprite
+    layers:
+    - state: icon_knotted_1
+      color: "#36802D"
+      scale: 0.5, 0.5
+    - state: dildo_knotted_1
+      color: "#36802D"
+      scale: 0.5, 0.5
+
+- type: entity
+  parent: BaseFunny
+  id: DildoKnotted2Green
+  name: knotted dildo
+  suffix: Normal, Green
+  description: size - normal 
+  components:
+  - type: Sprite
+    layers:
+    - state: icon_knotted_1
+      color: "#36802D"
+      scale: 0.55, 0.6
+    - state: dildo_knotted_1
+      color: "#36802D"
+      scale: 0.55, 0.6
+
+- type: entity
+  parent: BaseFunny
+  id: DildoKnotted3Green
+  name: knotted dildo
+  suffix: Big, Green
+  description: size - big 
+  components:
+  - type: Sprite
+    layers:
+    - state: icon_knotted_1
+      color: "#36802D"
+      scale: 0.6, 0.7
+    - state: dildo_knotted_1
+      color: "#36802D"
+      scale: 0.6, 0.7
+#knotblue
 - type: entity
   parent: BaseFunny
   id: DildoKnotted1Blue
@@ -43,107 +125,43 @@
     layers:
     - state: icon_knotted_1
       color: "#003399"
+      scale: 0.5, 0.5
     - state: dildo_knotted_1
       color: "#003399"
+      scale: 0.5, 0.5
 
 - type: entity
   parent: BaseFunny
-  id: DildoKnotted1Green
+  id: DildoKnotted2Blue
   name: knotted dildo
-  suffix: Small, Green
-  description: size - small 
+  suffix: Normal, Blue
+  description: size - normal 
   components:
   - type: Sprite
     layers:
     - state: icon_knotted_1
-      color: "#36802d"
+      color: "#003399"
+      scale: 0.55, 0.6
     - state: dildo_knotted_1
-      color: "#36802d"
-#human
-- type: entity
-  parent: BaseFunny
-  id: DildoHuman1Red
-  name: human dildo
-  suffix: Small, Red
-  description: size - small 
-  components:
-  - type: Sprite
-    layers:
-    - state: icon_human_1
-      color: "#320a18"
-    - state: dildo_human_1
-      color: "#320a18"
+      color: "#003399"
+      scale: 0.55, 0.6
 
 - type: entity
   parent: BaseFunny
-  id: DildoHuman1Blue
-  name: human dildo
-  suffix: Small, Blue
-  description: size - small 
+  id: DildoKnotted3Blue
+  name: knotted dildo
+  suffix: Big, Blue
+  description: size - big 
   components:
   - type: Sprite
     layers:
-    - state: icon_human_1
+    - state: icon_knotted_1
       color: "#003399"
-    - state: dildo_human_1
+      scale: 0.6, 0.7
+    - state: dildo_knotted_1
       color: "#003399"
-
-- type: entity
-  parent: BaseFunny
-  id: DildoHuman1Green
-  name: human dildo
-  suffix: Small, Green
-  description: size - small 
-  components:
-  - type: Sprite
-    layers:
-    - state: icon_human_1
-      color: "#36802d"
-    - state: dildo_human_1
-      color: "#36802d"
-#plain
-- type: entity
-  parent: BaseFunny
-  id: DildoPlain1Red
-  name: plain dildo
-  suffix: Small, Red
-  description: size - small 
-  components:
-  - type: Sprite
-    layers:
-    - state: icon_plain_1
-      color: "#320a18"
-    - state: dildo_plain_1
-      color: "#320a18"
-
-- type: entity
-  parent: BaseFunny
-  id: DildoPlain1Blue
-  name: plain dildo
-  suffix: Small, Blue
-  description: size - small 
-  components:
-  - type: Sprite
-    layers:
-    - state: icon_plain_1
-      color: "#003399"
-    - state: dildo_plain_1
-      color: "#003399"
-
-- type: entity
-  parent: BaseFunny
-  id: DildoPlain1Green
-  name: plain dildo
-  suffix: Small, Green
-  description: size - small 
-  components:
-  - type: Sprite
-    layers:
-    - state: icon_plain_1
-      color: "#36802d"
-    - state: dildo_plain_1
-      color: "#36802d"
-#flared
+      scale: 0.6, 0.7
+#flaredred
 - type: entity
   parent: BaseFunny
   id: DildoFlared1Red
@@ -154,10 +172,92 @@
   - type: Sprite
     layers:
     - state: icon_flared_1
-      color: "#320a18"
+      color: "#320A18"
+      scale: 0.5, 0.5
     - state: dildo_flared_1
-      color: "#320a18"
+      color: "#320A18"
+      scale: 0.5, 0.5
 
+- type: entity
+  parent: BaseFunny
+  id: DildoFlared2Red
+  name: flared dildo
+  suffix: Normal, Red
+  description: size - normal 
+  components:
+  - type: Sprite
+    layers:
+    - state: icon_flared_1
+      color: "#320A18"
+      scale: 0.55, 0.6
+    - state: dildo_flared_1
+      color: "#320A18"
+      scale: 0.55, 0.6
+
+- type: entity
+  parent: BaseFunny
+  id: DildoFlared3Red
+  name: flared dildo
+  suffix: Big, Red
+  description: size - big 
+  components:
+  - type: Sprite
+    layers:
+    - state: icon_flared_1
+      color: "#320A18"
+      scale: 0.6, 0.7
+    - state: dildo_flared_1
+      color: "#320A18"
+      scale: 0.6, 0.7
+#flaredgreen
+- type: entity
+  parent: BaseFunny
+  id: DildoFlared1Green
+  name: flared dildo
+  suffix: Small, Green
+  description: size - small 
+  components:
+  - type: Sprite
+    layers:
+    - state: icon_flared_1
+      color: "#36802D"
+      scale: 0.5, 0.5
+    - state: dildo_flared_1
+      color: "#36802D"
+      scale: 0.5, 0.5
+
+- type: entity
+  parent: BaseFunny
+  id: DildoFlared2Green
+  name: flared dildo
+  suffix: Normal, Green
+  description: size - normal 
+  components:
+  - type: Sprite
+    layers:
+    - state: icon_flared_1
+      color: "#36802D"
+      scale: 0.55, 0.6
+    - state: dildo_flared_1
+      color: "#36802D"
+      scale: 0.55, 0.6
+
+- type: entity
+  parent: BaseFunny
+  id: DildoFlared3Green
+  name: flared dildo
+  suffix: Big, Green
+  description: size - big 
+  components:
+  - type: Sprite
+    layers:
+    - state: icon_flared_1
+      color: "#36802D"
+      scale: 0.6, 0.7
+    - state: dildo_flared_1
+      color: "#36802D"
+      scale: 0.6, 0.7
+#flaredblue
 - type: entity
   parent: BaseFunny
   id: DildoFlared1Blue
@@ -169,19 +269,39 @@
     layers:
     - state: icon_flared_1
       color: "#003399"
+      scale: 0.5, 0.5
     - state: dildo_flared_1
       color: "#003399"
+      scale: 0.5, 0.5
 
 - type: entity
   parent: BaseFunny
-  id: DildoFlared1Green
+  id: DildoFlared2Blue
   name: flared dildo
-  suffix: Small, Green
-  description: size - small 
+  suffix: Normal, Blue
+  description: size - normal 
   components:
   - type: Sprite
     layers:
     - state: icon_flared_1
-      color: "#36802d"
+      color: "#003399"
+      scale: 0.55, 0.6
     - state: dildo_flared_1
-      color: "#36802d"
+      color: "#003399"
+      scale: 0.55, 0.6
+
+- type: entity
+  parent: BaseFunny
+  id: DildoFlared3Blue
+  name: flared dildo
+  suffix: Big, Blue
+  description: size - big 
+  components:
+  - type: Sprite
+    layers:
+    - state: icon_flared_1
+      color: "#003399"
+      scale: 0.6, 0.7
+    - state: dildo_flared_1
+      color: "#003399"
+      scale: 0.6, 0.7
