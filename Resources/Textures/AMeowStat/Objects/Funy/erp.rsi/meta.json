@@ -1,53 +1,165 @@
 {
   "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Takem from https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13/commit/c9f882c3b4c1ecb0e7bd14dd861a978a85f294a5",
+  "license": "CC-BY-SA3.0",
+  "copyright": "taken from splurt station at commit https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13/commit/c9f882c3b4c1ecb0e7bd14dd861a978a85f294a5, inhand sprites by 431695500937265160 (discord)",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "DildoKnotted1"
+      "name": "dildo_knotted_1"
     },
     {
-      "name": "DildoKnotted2"
+      "name": "dildo_knotted_2"
     },
     {
-      "name": "DildoKnotted3"
+      "name": "dildo_knotted_3"
     },
     {
-      "name": "DildoHuman1"
+      "name": "knotted_1-inhand-left",
+      "directions": 4
     },
     {
-      "name": "DildoHuman2"
+      "name": "knotted_1-inhand-right",
+      "directions": 4
     },
     {
-      "name": "DildoHuman3"
+      "name": "knotted_2-inhand-left",
+      "directions": 4
     },
     {
-      "name": "DildoPlain1"
+      "name": "knotted_2-inhand-right",
+      "directions": 4
     },
     {
-      "name": "DildoPlain2"
+      "name": "knotted_3-inhand-left",
+      "directions": 4
     },
     {
-      "name": "DildoPlain3"
+      "name": "knotted_3-inhand-right",
+      "directions": 4
     },
     {
-      "name": "DildoFlared1"
+      "name": "dildo_human_1"
     },
     {
-      "name": "DildoFlared2"
+      "name": "dildo_human_2"
     },
     {
-      "name": "DildoFlared3"
+      "name": "dildo_human_3"
     },
     {
-      "name": "DildoFlared4"
+      "name": "human_1-inhand-left",
+      "directions": 4
     },
     {
-      "name": "DildoFlared5"
+      "name": "human_1-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "human_2-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "human_2-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "human_3-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "human_3-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "dildo_plain_1"
+    },
+    {
+      "name": "dildo_plain_2"
+    },
+    {
+      "name": "dildo_plain_3"
+    },
+    {
+      "name": "plain_1-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "plain_1-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "plain_2-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "plain_2-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "plain_3-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "plain_3-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "dildo_flared_1"
+    },
+    {
+      "name": "dildo_flared_2"
+    },
+    {
+      "name": "dildo_flared_3"
+    },
+    {
+      "name": "dildo_flared_4"
+    },
+    {
+      "name": "dildo_flared_5"
+    },
+    {
+      "name": "flared_1-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "flared_1-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "flared_2-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "flared_2-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "flared_3-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "flared_3-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "flared_4-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "flared_4-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "flared_5-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "flared_5-inhand-right",
+      "directions": 4
     }
   ]
 }

@@ -1,12 +1,17 @@
 - type: entity
   parent: BaseItem
   id: BaseFunny
+  name: dildo
   abstract: true
   components:
   - type: Item
     size: Small
   - type: Sprite
-    sprite: /AMeowStat/Objects/Funy/erp.rsi
+    sprite: AMeowStat/Objects/Funy/erp.rsi
+    layers:
+    - state: icon
+      color: "#320a18"
+    - state: dildo_knotted_1
   - type: UseDelay
     delay: 1.0
   - type: MeleeWeapon
@@ -32,11 +37,11 @@
       left:
       - state: inhand-left
         color: "#320a18"
-      - state: knotted1-inhand-left
+      - state: knotted_1-inhand-left
       right:
       - state: inhand-right
         color: "#320a18"
-      - state: knotted1-inhand-right
+      - state: knotted_1-inhand-right
 
 - type: entity
   parent: BaseFunny
@@ -52,11 +57,11 @@
       left:
       - state: inhand-left
         color: "#003399"
-      - state: knotted1-inhand-left
+      - state: knotted_1-inhand-left
       right:
       - state: inhand-right
         color: "#003399"
-      - state: knotted1-inhand-right
+      - state: knotted_1-inhand-right
 
 - type: entity
   parent: BaseFunny
@@ -72,11 +77,11 @@
       left:
       - state: inhand-left
         color: "#36802d"
-      - state: knotted1-inhand-left
+      - state: knotted_1-inhand-left
       right:
       - state: inhand-right
         color: "#36802d"
-      - state: knotted1-inhand-right
+      - state: knotted_1-inhand-right
 #human
 - type: entity
   parent: BaseFunny
