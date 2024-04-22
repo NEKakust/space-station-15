@@ -17,28 +17,7 @@
       "name": "dildo_knotted_3"
     },
     {
-      "name": "knotted_1-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "knotted_1-inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "knotted_2-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "knotted_2-inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "knotted_3-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "knotted_3-inhand-right",
-      "directions": 4
+      "name": "icon_knotted_1"
     },
     {
       "name": "dildo_human_1"
@@ -50,28 +29,7 @@
       "name": "dildo_human_3"
     },
     {
-      "name": "human_1-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "human_1-inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "human_2-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "human_2-inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "human_3-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "human_3-inhand-right",
-      "directions": 4
+      "name": "icon_human_1"
     },
     {
       "name": "dildo_plain_1"
@@ -83,28 +41,7 @@
       "name": "dildo_plain_3"
     },
     {
-      "name": "plain_1-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "plain_1-inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "plain_2-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "plain_2-inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "plain_3-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "plain_3-inhand-right",
-      "directions": 4
+      "name": "icon_plain_1"
     },
     {
       "name": "dildo_flared_1"
@@ -122,44 +59,7 @@
       "name": "dildo_flared_5"
     },
     {
-      "name": "flared_1-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "flared_1-inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "flared_2-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "flared_2-inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "flared_3-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "flared_3-inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "flared_4-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "flared_4-inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "flared_5-inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "flared_5-inhand-right",
-      "directions": 4
+      "name": "icon_flared_1"
     }
   ]
 }
