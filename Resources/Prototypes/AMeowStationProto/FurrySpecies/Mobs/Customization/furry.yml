@@ -1,4 +1,4 @@
-####################################Ушки##################################################
+####################################Ушки/Рога##################################################
 
 - type: marking
   id: CatEarsFurry
@@ -64,6 +64,52 @@
   - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/dogears.rsi
     state: dog_ears
 
+- type: marking
+  id: GoatEarsFurry
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/horns.rsi
+    state: goatears
+
+- type: marking
+  id: GoatHornsFurry
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/horns.rsi
+    state: goat
+
+- type: marking
+  id: DeerHornsFurry
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/horns.rsi
+    state: deer
+
+- type: marking
+  id: DeerSmallHornsFurry
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/horns.rsi
+    state: deer_small
+
+- type: marking
+  id: RamHornsFurry
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/horns.rsi
+    state: ram
+
+
 ####################################Хвосты##################################################
 
 
@@ -91,7 +137,7 @@
   id: FoxTailFurry
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Furry]
+  speciesRestriction: [Furry, Human]
   coloring:
     default:
       type:
@@ -145,6 +191,15 @@
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/shorttail.rsi
     state: tail_short
+
+- type: marking
+  id: GoatTailFurry
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Furry]
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/horns.rsi
+    state: tail_goat
 
 
 ################################Мордочки##########################################
@@ -250,3 +305,17 @@
   sprites:
   - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/elfears.rsi
     state: elf_ears
+
+- type: marking
+  id: HornsImp
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human, Dwarf]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#8B0000"
+  sprites:
+  - sprite: AMeowStat/FurrySpecies/Customization/Earsfurry/horns.rsi
+    state: imp

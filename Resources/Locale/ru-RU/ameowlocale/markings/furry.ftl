@@ -50,3 +50,24 @@ marking-TattooEyeRightFurry-tattoo_eye_r = Правый глаз
 
 marking-ElfEars = Уши эльфа
 marking-ElfEars-elf_ears = Уши эльфа
+
+marking-HornsImp = Рожки беса
+marking-HornsImp-imp = Рожки беса
+
+marking-GoatHornsFurry = Рога козла
+marking-GoatHornsFurry-goat = Рога козла
+
+marking-DeerHornsFurry = Рога оленя
+marking-DeerHornsFurry-deer = Рога оленя
+
+marking-DeerSmallHornsFurry = Маленькие рога оленя
+marking-DeerSmallHornsFurry-deer_small = Маленькие рога оленя
+
+marking-RamHornsFurry = Рога барана
+marking-RamHornsFurry-ram = Рога барана
+
+marking-GoatTailFurry = Хвост козла
+marking-GoatTailFurry-tail_goat = Хвост козла
+
+marking-GoatEarsFurry = Уши козла
+marking-GoatEarsFurry-goatears = Уши козла
