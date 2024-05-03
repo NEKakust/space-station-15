@@ -21,6 +21,31 @@
     state: icon
   - type: Item
     sprite: Objects/Misc/Handy_Flags/NT_handy_flag.rsi
+    
+- type: entity
+  parent: BaseItem
+  id: ZHandyFlag
+  name: флажок Nanotrasen
+  description: "Слава НТ.. Стоп. Почему логотип повёрнут на бок?"
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/Handy_Flags/Z_handy_flag.rsi
+    state: icon
+  - type: Item
+    sprite: Objects/Misc/Handy_Flags/Z_handy_flag.rsi
+    
+    
+- type: entity
+  parent: BaseItem
+  id: RUHandyFlag
+  name: флажок России
+  description: ""
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/Handy_Flags/RU_handy_flag.rsi
+    state: icon
+  - type: Item
+    sprite: Objects/Misc/Handy_Flags/RU_handy_flag.rsi
 
 - type: entity
   parent: BaseItem

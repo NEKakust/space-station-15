@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "PixelTK leaves his mark on upstream",
+  "copyright": "PixelTK leaves his mark on upstream, zpin and rupin by 1008671789691453461 (discord)",
   "size": {
     "x": 32,
     "y": 32
@@ -69,6 +69,20 @@
     {
       "name": "trans-equipped",
       "directions": 4
-    }
+    },
+	{
+      "name": "zpin"
+    },
+    {
+      "name": "zpin-equipped",
+      "directions": 4
+    },
+	{
+      "name": "rupin"
+    },
+    {
+      "name": "rupin-equipped",
+      "directions": 4
+    },
   ]
 }

@@ -5,7 +5,7 @@
   - type: Item
     size: Small
   - type: Sprite
-    sprite: /Uploaded/ogurec.rsi
+    sprite: AMeowStat/ogurec/ogurec.rsi
     scale: 0.25, 0.25
   - type: UseDelay
     delay: 1.0

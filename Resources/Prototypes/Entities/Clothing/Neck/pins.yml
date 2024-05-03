@@ -151,3 +151,35 @@
     clothingVisuals:
       neck:
       - state: trans-equipped
+    
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckZPin
+  name: значок Nanotrasen
+  description: Нагрудный значок с логотипом Nanotra.. Стоп. Почему он повёрнут на бок?
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Misc/pins.rsi
+    layers:
+    - state: zpin
+  - type: Clothing
+    sprite: Clothing/Neck/Misc/pins.rsi
+    clothingVisuals:
+      neck:
+      - state: zpin-equipped
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckRUPin
+  name: российский значок
+  description:
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Misc/pins.rsi
+    layers:
+    - state: rupin
+  - type: Clothing
+    sprite: Clothing/Neck/Misc/pins.rsi
+    clothingVisuals:
+      neck:
+      - state: rupin-equipped

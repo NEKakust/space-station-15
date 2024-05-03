@@ -26,6 +26,24 @@
   components:
   - type: Sprite
     state: NT_flag
+    
+- type: entity
+  parent: BaseFlag
+  id: ZFlag
+  name: флаг Nanotrasen
+  description: "Слава НТ.. Стоп. Почему он повёрнут на бок?"
+  components:
+  - type: Sprite
+    state: Z_flag
+    
+- type: entity
+  parent: BaseFlag
+  id: RUFlag
+  name: флаг России
+  description: ""
+  components:
+  - type: Sprite
+    state: RU_flag
 
 - type: entity
   parent: BaseFlag
