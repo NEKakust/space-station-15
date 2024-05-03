@@ -5,10 +5,10 @@
       "y": 32
   },
   "license": "CC-BY-NC-SA-3.0",
-  "copyright": "Taken from https://github.com/goonstation/goonstation at commit e77d85d9c1d93aa32da7702737ceeac2b56738ac, slightly modified by PixelTK",
+  "copyright": "Taken from https://github.com/goonstation/goonstation at commit e77d85d9c1d93aa32da7702737ceeac2b56738ac, slightly modified by PixelTK, socks taken from https://github.com/Simple-Station/Parkstation at commit 0733346cc0b70959b9446640f22aebf1052b8c95",
   "states": [
       {
-        "name": "back",
+        "name": "back"
       },
       {
         "name": "belt"
@@ -66,6 +66,9 @@
       },
       {
         "name": "shoes"
+      },
+      {
+        "name": "socks"
       },
       {
         "name": "suit"
