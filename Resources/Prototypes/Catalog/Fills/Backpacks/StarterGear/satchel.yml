@@ -289,10 +289,18 @@
       - id: RubberStampMime
 
 - type: entity
-  noSpawn: true
   parent: ClothingBackpackSatchelHolding
+  suffix: Админ, Невидимый
   id: ClothingBackpackSatchelHoldingAdmin
   components:
+  - type: Sprite
+    sprite: Clothing/Back/Satchels/holding.rsi
+    state: icon
+    layers:
+    - state: icon
+    - state: icon-unlit
+      shader: unshaded
+    color: 00000000
   - type: StorageFill
     contents:
     - id: GasAnalyzer

@@ -659,12 +659,15 @@
   parent: CentcomPDA
   id: AdminPDA
   name: Admin PDA
+  suffix: Админ, Невидимый
   description: If you are not an admin please return this PDA to the nearest admin.
   components:
   - type: Pda
     id: PassengerIDCard
   - type: HealthAnalyzer
     scanDelay: 0
+  - type: Sprite
+    color: 00000000
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     preinstalled:

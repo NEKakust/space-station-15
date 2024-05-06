@@ -2,10 +2,10 @@
   parent: MobObserver
   id: AdminObserver
   name: admin observer
-  noSpawn: true
+  suffix: Админ
   components:
   - type: ContentEye
-    maxZoom: 8.916104, 8.916104
+    maxZoom: 12, 12
   - type: Tag
     tags:
     - InstantDoAfters
@@ -16,10 +16,18 @@
     context: "aghost"
   - type: Ghost
     canInteract: true
+    color: 00000000
   - type: GhostHearing
   - type: Hands
   - type: Puller
   - type: CombatMode
+  - type: InteractionPopup
+    successChance: 1
+    interactSuccessString: petting-success-soft-floofy
+    interactFailureString: petting-failure-generic
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/fox_squeak.ogg
   - type: Physics
     ignorePaused: true
     bodyType: Kinematic
@@ -45,7 +53,6 @@
       - key: enum.CrewMonitoringUIKey.Key
         type: CrewMonitoringBoundUserInterface
       - key: enum.GeneralStationRecordConsoleKey.Key
-        # who the fuck named this bruh
         type: GeneralStationRecordConsoleBoundUserInterface
   - type: IntrinsicUI
     uis:
