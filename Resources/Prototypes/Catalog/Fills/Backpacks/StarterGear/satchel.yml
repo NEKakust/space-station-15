@@ -300,7 +300,7 @@
     - state: icon
     - state: icon-unlit
       shader: unshaded
-    color: 00000000
+    color: 000000
   - type: StorageFill
     contents:
     - id: GasAnalyzer

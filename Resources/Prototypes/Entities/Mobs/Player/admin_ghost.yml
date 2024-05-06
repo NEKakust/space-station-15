@@ -16,7 +16,7 @@
     context: "aghost"
   - type: Ghost
     canInteract: true
-    color: 00000000
+    color: 000000
   - type: GhostHearing
   - type: Hands
   - type: Puller

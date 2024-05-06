@@ -667,7 +667,7 @@
   - type: HealthAnalyzer
     scanDelay: 0
   - type: Sprite
-    color: 00000000
+    color: 000000
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     preinstalled:
