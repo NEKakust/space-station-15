@@ -269,4 +269,4 @@ corvax-chatsan-replacement-134 = бравые работники
 corvax-chatsan-word-135 = вахтёра
 corvax-chatsan-replacement-135 = бравого работника
 corvax-chatsan-word-136 = вахтёров
-corvax-chatsan-replacement-136 = бравых работникок
+corvax-chatsan-replacement-136 = бравых работников
