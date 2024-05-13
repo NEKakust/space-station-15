@@ -78,7 +78,7 @@ namespace Content.Shared.Preferences
             List<string> antagPreferences,
             List<string> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
-            : this(other.Name, other.FlavorText, other.Species, other.Voice, other.Age, other.Sex, other.Gender, other.Appearance, other.SpawnPriority,
+            : this(other.Name, other.FlavorText, other.Species, other.Age, other.Sex, other.Gender, other.Appearance, other.SpawnPriority,
                 jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts)
         {
         }
@@ -103,7 +103,7 @@ namespace Content.Shared.Preferences
             IReadOnlyList<string> antagPreferences,
             IReadOnlyList<string> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
-            : this(name, flavortext, species, voice, age, sex, gender, appearance, spawnPriority, new Dictionary<string, JobPriority>(jobPriorities),
+            : this(name, flavortext, species, age, sex, gender, appearance, spawnPriority, new Dictionary<string, JobPriority>(jobPriorities),
                 preferenceUnavailable, new List<string>(antagPreferences), new List<string>(traitPreferences), new Dictionary<string, RoleLoadout>(loadouts))
         {
         }
@@ -202,7 +202,7 @@ namespace Content.Shared.Preferences
 
             var name = GetName(species, gender);
 
-            return new HumanoidCharacterProfile(name, "", species, voiceId, age, sex, gender, HumanoidCharacterAppearance.Random(species, sex), SpawnPriorityPreference.None,
+            return new HumanoidCharacterProfile(name, "", species, age, sex, gender, HumanoidCharacterAppearance.Random(species, sex), SpawnPriorityPreference.None,
                 new Dictionary<string, JobPriority>
                 {
                     {SharedGameTicker.FallbackOverflowJob, JobPriority.High},
