@@ -51,8 +51,6 @@ namespace Content.Client.Preferences.UI
         private Button _saveButton => CSaveButton;
         private OptionButton _sexButton => CSexButton;
         private OptionButton _genderButton => CPronounsButton;
-        private OptionButton _voiceButton => CVoiceButton; // Corvax-TTS
-        private Button _voicePlayButton => CVoicePlayButton; // Corvax-TTS
         private Slider _skinColor => CSkin;
         private OptionButton _spawnPriorityButton => CSpawnPriorityButton;
         private SingleMarkingPicker _hairPicker => CHairStylePicker;
@@ -150,25 +148,10 @@ namespace Content.Client.Preferences.UI
 
             #endregion Gender
 
-            // Corvax-TTS-Start
-            #region Voice
-
-            if (configurationManager.GetCVar(CCCVars.TTSEnabled))
-            {
-                TTSContainer.Visible = true;
-                InitializeVoice();
-            }
-
-            #endregion
-            // Corvax-TTS-End
 
             #region Species
 
             _speciesList = prototypeManager.EnumeratePrototypes<SpeciesPrototype>().Where(o => o.RoundStart).ToList();
-            // Corvax-Sponsors-Start
-            if (_sponsorsMgr != null)
-                _speciesList = _speciesList.Where(p => !p.SponsorOnly || _sponsorsMgr.GetClientPrototypes().Contains(p.ID)).ToList();
-            // Corvax-Sponsors-End
             for (var i = 0; i < _speciesList.Count; i++)
             {
                 var name = Loc.GetString(_speciesList[i].Name);
@@ -788,7 +771,6 @@ namespace Content.Client.Preferences.UI
                     break;
             }
             UpdateGenderControls();
-            UpdateTTSVoicesControls(); // Corvax-TTS
             CMarkings.SetSex(newSex);
             SetDirty();
         }
@@ -799,13 +781,6 @@ namespace Content.Client.Preferences.UI
             SetDirty();
         }
 
-        // Corvax-TTS-Start
-        private void SetVoice(string newVoice)
-        {
-            Profile = Profile?.WithVoice(newVoice);
-            IsDirty = true;
-        }
-        // Corvax-TTS-End
 
         private void SetSpecies(string newSpecies)
         {
@@ -1173,7 +1148,6 @@ namespace Content.Client.Preferences.UI
             UpdateAntagPreferences();
             UpdateTraitPreferences();
             UpdateMarkings();
-            UpdateTTSVoicesControls(); // Corvax-TTS
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
