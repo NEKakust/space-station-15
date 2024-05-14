@@ -1,5 +1,4 @@
 using System.Linq;
-using Content.Client.Corvax.TTS;
 using Content.Client.Humanoid;
 using Content.Client.Inventory;
 using Content.Client.Lobby.UI;
