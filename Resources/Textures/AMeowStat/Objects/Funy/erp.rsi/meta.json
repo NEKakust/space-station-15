@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA3.0",
+  "copyright": "taken from splurt station at commit https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13/commit/c9f882c3b4c1ecb0e7bd14dd861a978a85f294a5, inhand sprites by 431695500937265160 (discord)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "dildo_knotted_1"
+    },
+    {
+      "name": "dildo_knotted_2"
+    },
+    {
+      "name": "dildo_knotted_3"
+    },
+    {
+      "name": "icon_knotted_1"
+    },
+    {
+      "name": "dildo_human_1"
+    },
+    {
+      "name": "dildo_human_2"
+    },
+    {
+      "name": "dildo_human_3"
+    },
+    {
+      "name": "icon_human_1"
+    },
+    {
+      "name": "dildo_plain_1"
+    },
+    {
+      "name": "dildo_plain_2"
+    },
+    {
+      "name": "dildo_plain_3"
+    },
+    {
+      "name": "icon_plain_1"
+    },
+    {
+      "name": "dildo_flared_1"
+    },
+    {
+      "name": "dildo_flared_2"
+    },
+    {
+      "name": "dildo_flared_3"
+    },
+    {
+      "name": "dildo_flared_4"
+    },
+    {
+      "name": "dildo_flared_5"
+    },
+    {
+      "name": "icon_flared_1"
+    }
+  ]
+}

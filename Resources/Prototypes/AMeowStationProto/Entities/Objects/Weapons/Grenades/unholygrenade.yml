@@ -12,7 +12,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 100000000
+    totalIntensity: 100000
     intensitySlope: 5
     maxIntensity: 50
     maxTileBreak: 999999999

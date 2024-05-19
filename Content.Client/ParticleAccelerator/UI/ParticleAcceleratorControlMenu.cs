@@ -48,7 +48,7 @@ namespace Content.Client.ParticleAccelerator.UI
         private bool _blockSpinBox;
         private bool _assembled;
         private bool _shouldContinueAnimating;
-        private int _maxStrength = 3;
+        private int _maxStrength = 1;
 
         public ParticleAcceleratorControlMenu(ParticleAcceleratorBoundUserInterface owner)
         {
