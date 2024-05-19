@@ -32,10 +32,3 @@
     - type: ReplacementAccent
       replacementChance: 0.15
       accent: liar
-
-- type: trait
-  id: Southern #warcrime not using locale
-  name: Рычащий акцент
-  description: р-р-рычащий акцент!
-  components:
-    - type: GrowlingAccent
