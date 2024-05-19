@@ -1,6 +1,5 @@
 using System.Numerics;
 using Content.Client.Animations;
-using Content.Client.Gameplay;
 using Content.Client.Items;
 using Content.Client.Weapons.Ranged.Components;
 using Content.Shared.Camera;
@@ -14,7 +13,6 @@ using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.Input;
 using Robust.Client.Player;
-using Robust.Client.State;
 using Robust.Shared.Animations;
 using Robust.Shared.Input;
 using Robust.Shared.Map;
@@ -32,7 +30,6 @@ public sealed partial class GunSystem : SharedGunSystem
     [Dependency] private readonly IEyeManager _eyeManager = default!;
     [Dependency] private readonly IInputManager _inputManager = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
-    [Dependency] private readonly IStateManager _state = default!;
     [Dependency] private readonly AnimationPlayerSystem _animPlayer = default!;
     [Dependency] private readonly InputSystem _inputSystem = default!;
     [Dependency] private readonly SharedCameraRecoilSystem _recoil = default!;
@@ -60,8 +57,7 @@ public sealed partial class GunSystem : SharedGunSystem
                     Timing,
                     _inputManager,
                     _player,
-                    this,
-                    TransformSystem));
+                    this));
             }
             else
             {
@@ -178,15 +174,10 @@ public sealed partial class GunSystem : SharedGunSystem
         // Define target coordinates relative to gun entity, so that network latency on moving grids doesn't fuck up the target location.
         var coordinates = EntityCoordinates.FromMap(entity, mousePos, TransformSystem, EntityManager);
 
-        NetEntity? target = null;
-        if (_state.CurrentState is GameplayStateBase screen)
-            target = GetNetEntity(screen.GetClickedEntity(mousePos));
-
         Log.Debug($"Sending shoot request tick {Timing.CurTick} / {Timing.CurTime}");
 
         EntityManager.RaisePredictiveEvent(new RequestShootEvent
         {
-            Target = target,
             Coordinates = GetNetCoordinates(coordinates),
             Gun = GetNetEntity(gunUid),
         });

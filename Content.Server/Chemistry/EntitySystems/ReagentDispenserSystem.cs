@@ -107,8 +107,9 @@ namespace Content.Server.Chemistry.EntitySystems
                     quantity = sol.Volume;
                     reagentColor = sol.GetColor(_prototypeManager);
                 }
+                var storedAmount = Loc.GetString("reagent-dispenser-window-quantity-label-text", ("quantity", quantity));
 
-                inventory.Add(new ReagentInventoryItem(storageSlotId, reagentLabel, quantity, reagentColor));
+                inventory.Add(new ReagentInventoryItem(storageSlotId, reagentLabel, storedAmount, reagentColor));
             }
 
             return inventory;

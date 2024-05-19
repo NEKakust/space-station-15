@@ -9,8 +9,6 @@ namespace Content.Server.Alert.Commands
     [AdminCommand(AdminFlags.Debug)]
     public sealed class ShowAlert : IConsoleCommand
     {
-        [Dependency] private readonly IEntityManager _e = default!;
-
         public string Command => "showalert";
         public string Description => "Shows an alert for a player, defaulting to current player";
         public string Help => "showalert <alertType> <severity, -1 if no severity> <name or userID, omit for current player>";
@@ -32,7 +30,7 @@ namespace Content.Server.Alert.Commands
                 if (!CommandUtils.TryGetAttachedEntityByUsernameOrId(shell, target, player, out attachedEntity)) return;
             }
 
-            if (!_e.TryGetComponent(attachedEntity, out AlertsComponent? alertsComponent))
+            if (!IoCManager.Resolve<IEntityManager>().TryGetComponent(attachedEntity, out AlertsComponent? alertsComponent))
             {
                 shell.WriteLine("user has no alerts component");
                 return;
@@ -40,7 +38,7 @@ namespace Content.Server.Alert.Commands
 
             var alertType = args[0];
             var severity = args[1];
-            var alertsSystem = _e.System<AlertsSystem>();
+            var alertsSystem = EntitySystem.Get<AlertsSystem>();
             if (!alertsSystem.TryGet(Enum.Parse<AlertType>(alertType), out var alert))
             {
                 shell.WriteLine("unrecognized alertType " + alertType);

@@ -6,7 +6,7 @@ namespace Content.Server.Ghost.Roles.UI
 {
     public sealed class GhostRolesEui : BaseEui
     {
-        private readonly GhostRoleSystem _ghostRoleSystem;
+        [Dependency] private readonly GhostRoleSystem _ghostRoleSystem;
 
         public GhostRolesEui()
         {
@@ -40,7 +40,7 @@ namespace Content.Server.Ghost.Roles.UI
         {
             base.Closed();
 
-            _ghostRoleSystem.CloseEui(Player);
+            EntitySystem.Get<GhostRoleSystem>().CloseEui(Player);
         }
     }
 }

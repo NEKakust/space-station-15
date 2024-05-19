@@ -30,6 +30,7 @@ using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Content.Server.Popups;
 using Content.Shared.Verbs;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Collections;
 
 namespace Content.Server.Ghost.Roles
@@ -791,15 +792,13 @@ namespace Content.Server.Ghost.Roles
     [AnyCommand]
     public sealed class GhostRoles : IConsoleCommand
     {
-        [Dependency] private readonly IEntityManager _e = default!;
-
         public string Command => "ghostroles";
         public string Description => "Opens the ghost role request window.";
         public string Help => $"{Command}";
         public void Execute(IConsoleShell shell, string argStr, string[] args)
         {
             if (shell.Player != null)
-                _e.System<GhostRoleSystem>().OpenEui(shell.Player);
+                EntitySystem.Get<GhostRoleSystem>().OpenEui(shell.Player);
             else
                 shell.WriteLine("You can only open the ghost roles UI on a client.");
         }

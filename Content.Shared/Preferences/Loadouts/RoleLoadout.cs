@@ -1,6 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Shared.Humanoid.Prototypes;
 using Content.Corvax.Interfaces.Shared;
 using Content.Shared.Random;
 using Robust.Shared.Collections;
@@ -15,13 +14,11 @@ namespace Content.Shared.Preferences.Loadouts;
 /// <summary>
 /// Contains all of the selected data for a role's loadout.
 /// </summary>
-[Serializable, NetSerializable, DataDefinition]
-public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
+[Serializable, NetSerializable]
+public sealed class RoleLoadout
 {
-    [DataField]
-    public ProtoId<RoleLoadoutPrototype> Role;
+    public readonly ProtoId<RoleLoadoutPrototype> Role;
 
-    [DataField]
     public Dictionary<ProtoId<LoadoutGroupPrototype>, List<Loadout>> SelectedLoadouts = new();
 
     /*
@@ -50,7 +47,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
     /// <summary>
     /// Ensures all prototypes exist and effects can be applied.
     /// </summary>
-    public void EnsureValid(HumanoidCharacterProfile profile, ICommonSession session, IDependencyCollection collection)
+    public void EnsureValid(ICommonSession session, IDependencyCollection collection)
     {
         var groupRemove = new ValueList<string>();
         var protoManager = collection.Resolve<IPrototypeManager>();
@@ -114,7 +111,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
                 // Corvax-Loadouts-End
 
                 // Validate the loadout can be applied (e.g. points).
-                if (!IsValid(profile, session, loadout.Prototype, collection, out _))
+                if (!IsValid(session, loadout.Prototype, collection, out _))
                 {
                     loadouts.RemoveAt(i);
                     continue;
@@ -200,7 +197,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
     /// <summary>
     /// Returns whether a loadout is valid or not.
     /// </summary>
-    public bool IsValid(HumanoidCharacterProfile profile, ICommonSession session, ProtoId<LoadoutPrototype> loadout, IDependencyCollection collection, [NotNullWhen(false)] out FormattedMessage? reason)
+    public bool IsValid(ICommonSession session, ProtoId<LoadoutPrototype> loadout, IDependencyCollection collection, [NotNullWhen(false)] out FormattedMessage? reason)
     {
         reason = null;
 
@@ -213,7 +210,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
             return false;
         }
 
-        if (!protoManager.HasIndex(Role))
+        if (!protoManager.TryIndex(Role, out var roleProto))
         {
             reason = FormattedMessage.FromUnformatted("loadouts-prototype-missing");
             return false;
@@ -223,7 +220,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
 
         foreach (var effect in loadoutProto.Effects)
         {
-            valid = valid && effect.Validate(profile, this, loadoutProto, session, collection, out reason);
+            valid = valid && effect.Validate(this, loadoutProto, session, collection, out reason);
         }
 
         return valid;
@@ -289,22 +286,5 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
         }
 
         return false;
-    }
-
-    public bool Equals(RoleLoadout? other)
-    {
-        if (ReferenceEquals(null, other)) return false;
-        if (ReferenceEquals(this, other)) return true;
-        return Role.Equals(other.Role) && SelectedLoadouts.SequenceEqual(other.SelectedLoadouts) && Points == other.Points;
-    }
-
-    public override bool Equals(object? obj)
-    {
-        return ReferenceEquals(this, obj) || obj is RoleLoadout other && Equals(other);
-    }
-
-    public override int GetHashCode()
-    {
-        return HashCode.Combine(Role, SelectedLoadouts, Points);
     }
 }

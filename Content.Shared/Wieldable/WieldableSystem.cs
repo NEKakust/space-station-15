@@ -16,7 +16,7 @@ using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Ranged.Systems;
 using Content.Shared.Wieldable.Components;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Timing;
+using Robust.Shared.Player;
 
 namespace Content.Shared.Wieldable;
 
@@ -30,7 +30,6 @@ public sealed class WieldableSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly UseDelaySystem _delay = default!;
     [Dependency] private readonly SharedGunSystem _gun = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
 
     public override void Initialize()
     {
@@ -43,7 +42,7 @@ public sealed class WieldableSystem : EntitySystem
         SubscribeLocalEvent<WieldableComponent, GetVerbsEvent<InteractionVerb>>(AddToggleWieldVerb);
 
         SubscribeLocalEvent<MeleeRequiresWieldComponent, AttemptMeleeEvent>(OnMeleeAttempt);
-        SubscribeLocalEvent<GunRequiresWieldComponent, ShotAttemptedEvent>(OnShootAttempt);
+        SubscribeLocalEvent<GunRequiresWieldComponent, AttemptShootEvent>(OnShootAttempt);
         SubscribeLocalEvent<GunWieldBonusComponent, ItemWieldedEvent>(OnGunWielded);
         SubscribeLocalEvent<GunWieldBonusComponent, ItemUnwieldedEvent>(OnGunUnwielded);
         SubscribeLocalEvent<GunWieldBonusComponent, GunRefreshModifiersEvent>(OnGunRefreshModifiers);
@@ -62,21 +61,16 @@ public sealed class WieldableSystem : EntitySystem
         }
     }
 
-    private void OnShootAttempt(EntityUid uid, GunRequiresWieldComponent component, ref ShotAttemptedEvent args)
+    private void OnShootAttempt(EntityUid uid, GunRequiresWieldComponent component, ref AttemptShootEvent args)
     {
         if (TryComp<WieldableComponent>(uid, out var wieldable) &&
             !wieldable.Wielded)
         {
-            args.Cancel();
+            args.Cancelled = true;
 
-            var time = _timing.CurTime;
-            if (time > component.LastPopup + component.PopupCooldown &&
-                !HasComp<MeleeWeaponComponent>(uid) &&
-                !HasComp<MeleeRequiresWieldComponent>(uid))
+            if (!HasComp<MeleeWeaponComponent>(uid) && !HasComp<MeleeRequiresWieldComponent>(uid))
             {
-                component.LastPopup = time;
-                var message = Loc.GetString("wieldable-component-requires", ("item", uid));
-                _popupSystem.PopupClient(message, args.Used, args.User);
+                args.Message = Loc.GetString("wieldable-component-requires", ("item", uid));
             }
         }
     }

@@ -1,4 +1,3 @@
-using Content.Client.Guidebook.Components;
 using Content.Shared.Chemistry;
 using Content.Shared.Containers.ItemSlots;
 using JetBrains.Annotations;
@@ -35,7 +34,6 @@ namespace Content.Client.Chemistry.UI
             _window = new()
             {
                 Title = EntMan.GetComponent<MetaDataComponent>(Owner).EntityName,
-                HelpGuidebookIds = EntMan.GetComponent<GuideHelpComponent>(Owner).Guides
             };
 
             _window.OpenCentered();

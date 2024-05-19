@@ -553,7 +553,7 @@
     - type: Sprite
       state: medical
     - type: MachineBoard
-      prototype: ChemMaster
+      prototype: chem_master
       requirements:
         Capacitor: 1
       materialRequirements:

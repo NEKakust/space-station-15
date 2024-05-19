@@ -165,7 +165,7 @@ public sealed partial class DragonSystem : EntitySystem
             return;
         }
 
-        var carpUid = Spawn(component.RiftPrototype, _transform.GetMapCoordinates(uid, xform: xform));
+        var carpUid = Spawn(component.RiftPrototype, xform.MapPosition);
         component.Rifts.Add(carpUid);
         Comp<DragonRiftComponent>(carpUid).Dragon = uid;
     }

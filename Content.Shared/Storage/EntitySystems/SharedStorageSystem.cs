@@ -1411,11 +1411,11 @@ public abstract class SharedStorageSystem : EntitySystem
             return;
 
         // Gets everyone looking at the UI
-        foreach (var actor in _ui.GetActors(uid, StorageComponent.StorageUiKey.Key).ToList())
+        foreach (var actor in _ui.GetActors(uid, StorageComponent.StorageUiKey.Key))
         {
             if (_admin.HasAdminFlag(actor, AdminFlags.Admin))
                 continue;
-
+                
             // And closes it unless they're an admin
             _ui.CloseUi(uid, StorageComponent.StorageUiKey.Key, actor);
         }
@@ -1433,15 +1433,15 @@ public abstract class SharedStorageSystem : EntitySystem
 
     private void HandleOpenBackpack(ICommonSession? session)
     {
-        HandleToggleSlotUI(session, "back");
+        HandleOpenSlotUI(session, "back");
     }
 
     private void HandleOpenBelt(ICommonSession? session)
     {
-        HandleToggleSlotUI(session, "belt");
+        HandleOpenSlotUI(session, "belt");
     }
 
-    private void HandleToggleSlotUI(ICommonSession? session, string slot)
+    private void HandleOpenSlotUI(ICommonSession? session, string slot)
     {
         if (session is not { } playerSession)
             return;
@@ -1455,14 +1455,7 @@ public abstract class SharedStorageSystem : EntitySystem
         if (!ActionBlocker.CanInteract(playerEnt, storageEnt))
             return;
 
-        if (!_ui.IsUiOpen(storageEnt.Value, StorageComponent.StorageUiKey.Key, playerEnt))
-        {
-            OpenStorageUI(storageEnt.Value, playerEnt);
-        }
-        else
-        {
-            _ui.CloseUi(storageEnt.Value, StorageComponent.StorageUiKey.Key, playerEnt);
-        }
+        OpenStorageUI(storageEnt.Value, playerEnt);
     }
 
     protected void ClearCantFillReasons()

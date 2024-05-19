@@ -14,6 +14,7 @@ using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
+using Content.Shared.Preferences.Loadouts.Effects;
 using Microsoft.EntityFrameworkCore;
 using Robust.Shared.Enums;
 using Robust.Shared.Network;
@@ -259,8 +260,8 @@ namespace Content.Server.Database
                 spawnPriority,
                 jobs,
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
-                antags.ToHashSet(),
-                traits.ToHashSet(),
+                antags.ToList(),
+                traits.ToList(),
                 loadouts
             );
         }

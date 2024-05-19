@@ -215,11 +215,11 @@ public sealed partial class StoreSystem
             {
                 HandleRefundComp(uid, component, actionId.Value);
 
-                if (listing.ProductUpgradeId != null)
+                if (listing.ProductUpgradeID != null)
                 {
                     foreach (var upgradeListing in component.Listings)
                     {
-                        if (upgradeListing.ID == listing.ProductUpgradeId)
+                        if (upgradeListing.ID == listing.ProductUpgradeID)
                         {
                             upgradeListing.ProductActionEntity = actionId.Value;
                             break;
@@ -229,7 +229,7 @@ public sealed partial class StoreSystem
             }
         }
 
-        if (listing is { ProductUpgradeId: not null, ProductActionEntity: not null })
+        if (listing is { ProductUpgradeID: not null, ProductActionEntity: not null })
         {
             if (listing.ProductActionEntity != null)
             {

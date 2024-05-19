@@ -15,7 +15,7 @@ public partial class InventorySystem : EntitySystem
     private void InitializeSlots()
     {
         SubscribeLocalEvent<InventoryComponent, ComponentInit>(OnInit);
-        SubscribeAllEvent<OpenSlotStorageNetworkMessage>(OnOpenSlotStorage);
+        SubscribeNetworkEvent<OpenSlotStorageNetworkMessage>(OnOpenSlotStorage);
 
         _vvm.GetTypeHandler<InventoryComponent>()
             .AddHandler(HandleViewVariablesSlots, ListViewVariablesSlots);

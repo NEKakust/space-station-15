@@ -1,5 +1,5 @@
 ent-ShadowBasaltOne = тенекамень
-    .desc = Светящиеся разломы в реальности. Это нормально, наверное.
+    .desc = Холодный камень.
 ent-ShadowBasaltTwo = { ent-ShadowBasaltOne }
     .desc = { ent-ShadowBasaltOne.desc }
 ent-ShadowBasaltThree = { ent-ShadowBasaltOne }

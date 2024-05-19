@@ -31,7 +31,6 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Utility;
 using System.Linq;
-using Robust.Server.GameObjects;
 
 namespace Content.Server.Nutrition.EntitySystems;
 
@@ -53,7 +52,6 @@ public sealed class FoodSystem : EntitySystem
     [Dependency] private readonly SharedHandsSystem _hands = default!;
     [Dependency] private readonly SharedInteractionSystem _interaction = default!;
     [Dependency] private readonly SolutionContainerSystem _solutionContainer = default!;
-    [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly StackSystem _stack = default!;
     [Dependency] private readonly StomachSystem _stomach = default!;
     [Dependency] private readonly UtensilSystem _utensil = default!;
@@ -152,7 +150,7 @@ public sealed class FoodSystem : EntitySystem
             return (false, true);
 
         // TODO make do-afters account for fixtures in the range check.
-        if (!_transform.GetMapCoordinates(user).InRange(_transform.GetMapCoordinates(target), MaxFeedDistance))
+        if (!Transform(user).MapPosition.InRange(Transform(target).MapPosition, MaxFeedDistance))
         {
             var message = Loc.GetString("interaction-system-user-interaction-cannot-reach");
             _popup.PopupEntity(message, user, user);
@@ -327,7 +325,7 @@ public sealed class FoodSystem : EntitySystem
         }
 
         //We're empty. Become trash.
-        var position = _transform.GetMapCoordinates(food);
+        var position = Transform(food).MapPosition;
         var finisher = Spawn(component.Trash, position);
 
         // If the user is holding the item

@@ -372,7 +372,7 @@ public sealed class NPCUtilitySystem : EntitySystem
                 if (compQuery.Components.Count == 0)
                     return;
 
-                var mapPos = _transform.GetMapCoordinates(owner, xform: _xformQuery.GetComponent(owner));
+                var mapPos = _xformQuery.GetComponent(owner).MapPosition;
                 _compTypes.Clear();
                 var i = -1;
                 EntityPrototype.ComponentRegistryEntry compZero = default!;

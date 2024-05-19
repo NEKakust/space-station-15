@@ -665,14 +665,14 @@ namespace Content.Shared.Interaction
                 else
                 {
                     // We'll still do the raycast from the centres but we'll bump the range as we know they're in range.
-                    originPos = _transform.GetMapCoordinates(origin, xform: xformA);
+                    originPos = xformA.MapPosition;
                     range = (originPos.Position - targetPos.Position).Length();
                 }
             }
             // No fixtures, e.g. wallmounts.
             else
             {
-                originPos = _transform.GetMapCoordinates(origin);
+                originPos = Transform(origin).MapPosition;
                 var otherParent = Transform(other).ParentUid;
                 targetRot = otherParent.IsValid() ? Transform(otherParent).LocalRotation + otherAngle : otherAngle;
             }
@@ -826,7 +826,7 @@ namespace Content.Shared.Interaction
             bool popup = false)
         {
             Ignored combinedPredicate = e => e == origin || (predicate?.Invoke(e) ?? false);
-            var originPosition = _transform.GetMapCoordinates(origin);
+            var originPosition = Transform(origin).MapPosition;
             var inRange = InRangeUnobstructed(originPosition, other, range, collisionMask, combinedPredicate, ShouldCheckAccess(origin));
 
             if (!inRange && popup && _gameTiming.IsFirstTimePredicted)

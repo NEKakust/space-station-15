@@ -428,7 +428,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingHeadHelmetEVALarge
+- proto: ClothingHeadHelmetHardsuitBasic
   entities:
   - uid: 82
     components:

@@ -40,7 +40,7 @@ namespace Content.Server.Ghost.Roles.Components
             set
             {
                 _roleName = value;
-                IoCManager.Resolve<IEntityManager>().System<GhostRoleSystem>().UpdateAllEui();
+                EntitySystem.Get<GhostRoleSystem>().UpdateAllEui();
             }
         }
 
@@ -52,7 +52,7 @@ namespace Content.Server.Ghost.Roles.Components
             set
             {
                 _roleDescription = value;
-                IoCManager.Resolve<IEntityManager>().System<GhostRoleSystem>().UpdateAllEui();
+                EntitySystem.Get<GhostRoleSystem>().UpdateAllEui();
             }
         }
 
@@ -64,7 +64,7 @@ namespace Content.Server.Ghost.Roles.Components
             set
             {
                 _roleRules = value;
-                IoCManager.Resolve<IEntityManager>().System<GhostRoleSystem>().UpdateAllEui();
+                EntitySystem.Get<GhostRoleSystem>().UpdateAllEui();
             }
         }
 
