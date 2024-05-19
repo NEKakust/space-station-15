@@ -31,9 +31,6 @@
       types:
         Heat: 10
   - type: PacifismDangerousAttack
-  - type: Explosive
-    explosionType: Default
-    totalIntensity: 120 # ~ 5 tile radius
 
 - type: entity
   id: WeldingFuelTankFull
@@ -45,7 +42,7 @@
       tank:
         reagents:
         - ReagentId: WeldingFuel
-          Quantity: 1500
+          Quantity: 15000
 
 - type: entity
   parent: [StorageTankBig, WeldingFuelTank] # StorageTankBig must come first, or else the desnity won't get inherited.
@@ -71,12 +68,8 @@
       tank:
         reagents:
         - ReagentId: WeldingFuel
-          Quantity: 5000
-        maxVol: 5000
-  - type: Explosive
-    explosionType: Default
-    totalIntensity: 140
-
+          Quantity: 50000
+        maxVol: 50000
 # Water
 
 - type: entity
@@ -112,7 +105,7 @@
       tank:
         reagents:
         - ReagentId: Water
-          Quantity: 1500
+          Quantity: 15000
 
 - type: entity
   parent: StorageTank
@@ -136,7 +129,7 @@
       tank:
         reagents:
         - ReagentId: Water
-          Quantity: 500
+          Quantity: 5000
   - type: ContainerContainer
     containers:
       bin-container: !type:Container
@@ -189,8 +182,8 @@
         reagents:
         - ReagentId: Water
 #         This is *100, 000* on /tg/
-          Quantity: 10000
-        maxVol: 10000
+          Quantity: 100000
+        maxVol: 100000
 #   It's pressurized...
   - type: ExaminableSolution
     solution: tank

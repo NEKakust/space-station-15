@@ -59,7 +59,7 @@ public sealed partial class ParticleAcceleratorControlBoxComponent : Component
     /// Modified by <see cref="ParticleAcceleratorLimiterWireAction"/>.
     /// </summary>
     [ViewVariables]
-    public ParticleAcceleratorPowerState MaxStrength = ParticleAcceleratorPowerState.Level2;
+    public ParticleAcceleratorPowerState MaxStrength = ParticleAcceleratorPowerState.Level1;
 
     /// <summary>
     /// The power supply unit of the assembled particle accelerator.

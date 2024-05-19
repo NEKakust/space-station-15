@@ -159,7 +159,7 @@ public sealed partial class ParticleAcceleratorSystem
             var impact = strength switch
             {
                 ParticleAcceleratorPowerState.Standby => LogImpact.Low,
-                ParticleAcceleratorPowerState.Level0 => LogImpact.Medium,
+                ParticleAcceleratorPowerState.Level0 => LogImpact.High,
                 ParticleAcceleratorPowerState.Level1 => LogImpact.High,
                 ParticleAcceleratorPowerState.Level2
                 or ParticleAcceleratorPowerState.Level3
