@@ -193,10 +193,32 @@ namespace Content.Client.Lobby.UI
 
             #endregion Gender
 
+            // Corvax-TTS-Start
+            #region Voice
 
-            RefreshSpecies();
+            if (configurationManager.GetCVar(CCCVars.TTSEnabled))
+            {
+                TTSContainer.Visible = true;
+                InitializeVoice();
+            }
 
-            SpeciesButton.OnItemSelected += args =>
+            #endregion
+            // Corvax-TTS-End
+
+            #region Species
+
+            _speciesList = prototypeManager.EnumeratePrototypes<SpeciesPrototype>().Where(o => o.RoundStart).ToList();
+            // Corvax-Sponsors-Start
+            if (_sponsorsMgr != null)
+                _speciesList = _speciesList.Where(p => !p.SponsorOnly || _sponsorsMgr.GetClientPrototypes().Contains(p.ID)).ToList();
+            // Corvax-Sponsors-End
+            for (var i = 0; i < _speciesList.Count; i++)
+            {
+                var name = Loc.GetString(_speciesList[i].Name);
+                CSpeciesButton.AddItem(name, i);
+            }
+
+            CSpeciesButton.OnItemSelected += args =>
             {
                 SpeciesButton.SelectId(args.Id);
                 SetSpecies(_species[args.Id].ID);
@@ -1074,6 +1096,13 @@ namespace Content.Client.Lobby.UI
             SetDirty();
         }
 
+        // Corvax-TTS-Start
+        private void SetVoice(string newVoice)
+        {
+            Profile = Profile?.WithVoice(newVoice);
+            IsDirty = true;
+        }
+        // Corvax-TTS-End
 
         private void SetSpecies(string newSpecies)
         {
@@ -1423,37 +1452,46 @@ namespace Content.Client.Lobby.UI
             var name = HumanoidCharacterProfile.GetName(Profile.Species, Profile.Gender);
             SetName(name);
             UpdateNameEdit();
+            UpdateFlavorTextEdit();
+            UpdateSexControls();
+            UpdateGenderControls();
+            UpdateSkinColor();
+            UpdateSpecies();
+            UpdateSpawnPriorityControls();
+            UpdateAgeEdit();
+            UpdateEyePickers();
+            UpdateSaveButton();
+            UpdateLoadouts();
+            UpdateRoleRequirements();
+            UpdateJobPriorities();
+            UpdateAntagPreferences();
+            UpdateTraitPreferences();
+            UpdateMarkings();
+            UpdateTTSVoicesControls(); // Corvax-TTS
+            UpdateHairPickers();
+            UpdateCMarkingsHair();
+            UpdateCMarkingsFacialHair();
+
+            _preferenceUnavailableButton.SelectId((int) Profile.PreferenceUnavailable);
         }
 
-        private async void ImportProfile()
+        private void UpdateJobPriorities()
         {
-            if (_exporting || CharacterSlot == null || Profile == null)
-                return;
-
-            StartExport();
-            await using var file = await _dialogManager.OpenFile(new FileDialogFilters(new FileDialogFilters.Group("yml")));
-
-            if (file == null)
+            foreach (var prioritySelector in _jobPriorities)
             {
-                EndExport();
-                return;
+                var jobId = prioritySelector.Proto.ID;
+
+                var priority = Profile?.JobPriorities.GetValueOrDefault(jobId, JobPriority.Never) ?? JobPriority.Never;
+
+                prioritySelector.Priority = priority;
             }
+        }
 
-            try
+        private void UpdateLoadouts()
+        {
+            foreach (var prioritySelector in _jobPriorities)
             {
-                var profile = _entManager.System<HumanoidAppearanceSystem>().FromStream(file, _playerManager.LocalSession!);
-                var oldProfile = Profile;
-                SetProfile(profile, CharacterSlot);
-
-                IsDirty = !profile.MemberwiseEquals(oldProfile);
-            }
-            catch (Exception exc)
-            {
-                _sawmill.Error($"Error when importing profile\n{exc.StackTrace}");
-            }
-            finally
-            {
-                EndExport();
+                prioritySelector.CloseLoadout();
             }
         }
 
