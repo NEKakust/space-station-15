@@ -84,11 +84,5 @@ public sealed partial class VoiceMaskNameChangeWindow : FancyWindow
                 break;
             }
         }
-
-        // Corvax-TTS-Start
-        var voiceIdx = _voices.FindIndex(v => v.ID == voice);
-        if (voiceIdx != -1)
-            VoiceSelector.Select(voiceIdx);
-        // Corvax-TTS-End
     }
 }
