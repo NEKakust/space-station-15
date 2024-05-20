@@ -4,14 +4,20 @@
   description: job-description-captain
   playTimeTracker: JobCaptain
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobHeadOfPersonnel
-      time: 18000 #5 hrs
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 72000 #20 hrs # Corvax-RoleTime
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 72000 #20 hrs # Corvax-RoleTime
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 7200 #2 hrs # Corvax-RoleTime
+      time: 72000 #20 hrs # Corvax-RoleTime
+#    - !type:DepartmentTimeRequirement
+#      department: Command
+#      time: 54000 # 15 hours
     - !type:OverallPlaytimeRequirement
-      time: 50400 #14 hrs # Corvax-RoleTime
+      time: 504000 #140 hrs # Corvax-RoleTime
   weight: 20
   startingGear: CaptainGear
   icon: "JobIconCaptain"

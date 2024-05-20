@@ -140,6 +140,8 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  - type: TTS # Corvax-TTS
+    voice: Chen
 
 - type: entity
   name: geras
@@ -148,9 +150,10 @@
   parent: BaseMobAdultSlimes
   noSpawn: true
   components:
+  # they portable...
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
-    baseSprintSpeed: 5.1 # +.6 from normal movement speed
+    baseSprintSpeed: 5 # +.5 from normal movement speed
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -158,7 +161,6 @@
   - type: NpcFactionMember
     factions:
     - NanoTrasen
-    - SimpleHostile
   - type: MultiHandedItem
   - type: Item
     size: Huge
@@ -168,7 +170,7 @@
     attackRate: 2
     damage:
       types:
-        Blunt: 5
+        Blunt: 4
   - type: DamageStateVisuals
     states:
       Alive:

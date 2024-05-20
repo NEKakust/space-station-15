@@ -59,8 +59,8 @@
       insertSuccessPopup: ame-controller-component-fuel-slot-success-insert
   - type: Explosive
     explosionType: Default
-    intensitySlope: 1
-    maxIntensity: 1
+    intensitySlope: 5
+    maxIntensity: 60
   - type: ActivatableUI
     key: enum.AmeControllerUiKey.Key
   - type: UserInterface

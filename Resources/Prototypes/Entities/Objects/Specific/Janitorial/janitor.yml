@@ -27,7 +27,7 @@
   - type: SolutionContainerManager
     solutions:
       absorbed:
-        maxVol: 150
+        maxVol: 100
   - type: UseDelay
     delay: 1
   - type: PhysicalComposition
@@ -67,7 +67,7 @@
       size: Large
       sprite: Objects/Specific/Janitorial/advmop.rsi
     - type: Absorbent
-      pickupAmount: 150
+      pickupAmount: 100
     - type: UseDelay
       delay: 1.0
     - type: SolutionRegeneration
@@ -75,12 +75,12 @@
       generated:
         reagents:
         - ReagentId: Water
-          Quantity: 10
+          Quantity: 5
     - type: SolutionPurge
       solution: absorbed
       preserve:
       - Water
-      quantity: 15
+      quantity: 10
     - type: SolutionContainerManager
       solutions:
         absorbed:
@@ -272,14 +272,14 @@
       size: Small
       sprite: Objects/Specific/Janitorial/rag.rsi
     - type: Absorbent
-      pickupAmount: 30
+      pickupAmount: 15
     - type: Construction
       graph: Rag
       node: rag
     - type: SolutionContainerManager
       solutions:
         absorbed:
-          maxVol: 40
+          maxVol: 30
     - type: UseDelay
       delay: 1.5
     - type: Tag

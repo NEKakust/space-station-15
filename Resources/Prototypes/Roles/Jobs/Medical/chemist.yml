@@ -4,9 +4,9 @@
   description: job-description-chemist
   playTimeTracker: JobChemist
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobMedicalDoctor
-      time: 10200
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 18000 #5 hrs # Corvax-RoleTime
   startingGear: ChemistGear
   icon: "JobIconChemist"
   supervisors: job-supervisors-cmo
