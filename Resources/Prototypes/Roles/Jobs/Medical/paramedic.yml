@@ -26,4 +26,5 @@
     belt: ClothingBeltMedicalEMTFilled
   storage:
     back:
+    - BoxSurvivalMedical
     - EmergencyRollerBedSpawnFolded

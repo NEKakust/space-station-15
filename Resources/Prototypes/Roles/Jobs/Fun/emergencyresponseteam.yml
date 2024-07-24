@@ -22,7 +22,6 @@
     shoes: ClothingShoesBootsCombatFilled
     head: ClothingHeadHelmetERTLeader
     eyes: ClothingEyesGlassesSecurity
-    neck: ClothingNeckMantleERTLeader # Corvax-Clothing
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterArmorBasicSlim
     id: ERTLeaderPDA
@@ -48,7 +47,6 @@
     shoes: ClothingShoesBootsMagAdv
     mask: ClothingMaskGasERT
     eyes: ClothingEyesGlassesSecurity
-    neck: ClothingNeckMantleERTLeader # Corvax-Clothing
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTLeader
     suitstorage: AirTankFilled
@@ -75,7 +73,6 @@
     shoes: ClothingShoesBootsMagAdv
     mask: ClothingMaskGasERT
     eyes: ClothingEyesGlassesSecurity
-    neck: ClothingNeckMantleERTLeader # Corvax-Clothing
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTLeader
     suitstorage: WeaponRifleLecter
@@ -383,7 +380,7 @@
     pocket1: Flare
   storage:
     back:
-    - BoxSurvivalMedical # Is this actually supposed to be Medical? All other ERT has Extended
+    - BoxSurvivalMedical
     - Hypospray
     - MedkitAdvancedFilled
     - CrowbarRed
@@ -408,7 +405,7 @@
     pocket1: Flare
   storage:
     back:
-    - BoxSurvivalMedical # Is this actually supposed to be Medical? All other ERT has Extended
+    - BoxSurvivalMedical
     - Hypospray
     - MedkitAdvancedFilled
     - CrowbarRed

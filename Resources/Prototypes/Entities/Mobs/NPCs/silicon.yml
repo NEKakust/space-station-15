@@ -156,7 +156,6 @@
     makeSentient: true
     name: ghost-role-information-honkbot-name
     description: ghost-role-information-honkbot-description
-    rules: ghost-role-information-freeagent-rules
     raffle:
       settings: default
   - type: GhostTakeoverAvailable
@@ -184,7 +183,6 @@
     makeSentient: true
     name: ghost-role-information-jonkbot-name
     description: ghost-role-information-jonkbot-description
-    rules: ghost-role-information-freeagent-rules
     raffle:
       settings: default
   - type: InteractionPopup
@@ -249,10 +247,7 @@
       path: /Audio/Ambience/Objects/periodic_beep.ogg
 
 - type: entity
-  parent:
-  - MobSiliconBase
-  - ShowMedicalIcons
-  - StripableInventoryBase
+  parent: [MobSiliconBase, ShowMedicalIcons]
   id: MobMedibot
   name: medibot
   description: No substitute for a doctor, but better than nothing.
@@ -294,17 +289,19 @@
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   - type: Advertise
     pack: MedibotAds
-  - type: Inventory
-    templateId: medibot
 
 - type: entity
-  parent:
-  - MobSiliconBase
-  - StripableInventoryBase
+  parent: MobSiliconBase
   id: MobMimeBot
   name: mimebot
   description: Why not give mimebot a friendly wave.
   components:
+  - type: InventorySlots
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
@@ -318,7 +315,6 @@
     makeSentient: true
     name: ghost-role-information-mimebot-name
     description: ghost-role-information-mimebot-description
-    rules: ghost-role-information-freeagent-rules
     raffle:
       settings: default
   - type: GhostTakeoverAvailable
@@ -342,7 +338,6 @@
     makeSentient: true
     name: ghost-role-information-supplybot-name
     description: ghost-role-information-supplybot-description
-    rules: ghost-role-information-nonantagonist-rules
     raffle:
       settings: default
   - type: GhostTakeoverAvailable

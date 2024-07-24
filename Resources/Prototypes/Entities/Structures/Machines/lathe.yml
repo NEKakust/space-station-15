@@ -196,8 +196,6 @@
       - WeaponCapacitorRechargerCircuitboard
       - HandheldStationMap
       - ClothingHeadHatWelding
-      - WetFloorSign
-      - ClothingHeadHatCone
   - type: EmagLatheRecipes
     emagStaticRecipes:
       - BoxLethalshot
@@ -1111,14 +1109,6 @@
       - ClothingHeadHatCapHoS
       - ClothingHeadHatBeretSecurityMedic
       - ClothingHeadHatCapWardenAlt
-      - ClothingUniformJumpsuitCapTurtleneck
-      - ClothingUniformJumpskirtCapTurtleneck
-      - ClothingUniformJumpsuitHoSBlack
-      - ClothingUniformJumpskirtHoSBlack
-      - ClothingUniformJumpsuitHoPTurtleneck
-      - ClothingUniformJumpskirtHoPTurtleneck
-      - ClothingUniformJumpsuitRDClassical
-      - ClothingUniformJumpskirtRDClassical
       # Corvax-Clothing-End
   - type: EmagLatheRecipes
     emagStaticRecipes:

@@ -271,11 +271,6 @@ public abstract partial class SharedToolSystem : EntitySystem
 
             return new ToolDoAfterEvent(Fuel, evClone, OriginalTarget);
         }
-
-        public override bool IsDuplicate(DoAfterEvent other)
-        {
-            return other is ToolDoAfterEvent toolDoAfter && WrappedEvent.IsDuplicate(toolDoAfter.WrappedEvent);
-        }
     }
 
     [Serializable, NetSerializable]

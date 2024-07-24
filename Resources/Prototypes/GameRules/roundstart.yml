@@ -173,9 +173,6 @@
     - prefRoles: [ Traitor ]
       max: 8
       playerRatio: 10
-      blacklist:
-        components:
-        - AntagImmune
       lateJoinAdditional: true
       mindComponents:
       - type: TraitorRole
@@ -235,7 +232,7 @@
       blacklist:
         components:
         - ZombieImmune
-        - AntagImmune
+        - InitialInfectedExempt
       briefing:
         text: zombie-patientzero-role-greeting
         color: Plum
@@ -244,7 +241,6 @@
       - type: PendingZombie
       - type: ZombifyOnDeath
       - type: IncurableZombie
-      - type: InitialInfected
       mindComponents:
       - type: InitialInfectedRole
         prototype: InitialInfected

@@ -2,9 +2,7 @@
   id: CorvaxAvrite
   mapName: 'Avrite Station'
   mapPath: /Maps/corvax_avrit.yml
-  maxRandomOffset: 0
-  randomRotation: false
-  minPlayers: 40
+  minPlayers: 0
   stations:
     Avrit:
       stationProto: StandardNanotrasenStation
@@ -14,6 +12,9 @@
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: 'SY'
+        - type: StationRandomTransform
+          enableStationRotation: false
+          maxStationOffset: null
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_corvaxavrit.yml
         - type: StationJobs

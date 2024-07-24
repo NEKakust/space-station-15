@@ -38,5 +38,6 @@
     ears: ClothingHeadsetService
   storage:
     back:
+    - BoxHug
     - RubberStampClown
     - CrayonRainbow
