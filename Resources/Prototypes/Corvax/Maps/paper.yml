@@ -2,9 +2,11 @@
   id: CorvaxPaper
   mapName: 'Paper Station'
   mapPath: /Maps/corvax_paper.yml
-  minPlayers: 0
-  maxPlayers: 200
-  stations:
+  maxRandomOffset: 0
+  randomRotation: false
+  minPlayers: 20
+  maxPlayers: 50
+  stations: 
     CorvaxPaper:
       stationProto: StandardNanotrasenStation
       components:
