@@ -2,8 +2,6 @@
   id: CorvaxSilly
   mapName: 'Silly Island'
   mapPath: /Maps/corvax_silly.yml
-  maxRandomOffset: 0
-  randomRotation: false
   minPlayers: 0
   maxPlayers: 200
   stations:
@@ -91,11 +89,3 @@
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 3, 3 ]
             CargoTechnician: [ 3, 3 ]
-        - type: StationGoal
-          goals:
-          - SolarPanels
-          - Artifacts
-          - Bank
-          - Zoo
-          - MiningOutpost
-          - Tesla

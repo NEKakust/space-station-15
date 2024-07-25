@@ -1,3 +1,4 @@
+using System.Numerics;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Alert;
@@ -15,9 +16,11 @@ using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Pulling.Events;
 using Content.Shared.Standing;
+using Content.Shared.Throwing;
 using Content.Shared.Verbs;
 using Robust.Shared.Containers;
 using Robust.Shared.Input.Binding;
+using Robust.Shared.Map;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
@@ -65,24 +68,9 @@ public sealed class PullingSystem : EntitySystem
         SubscribeLocalEvent<PullerComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovespeed);
         SubscribeLocalEvent<PullerComponent, DropHandItemsEvent>(OnDropHandItems);
 
-        SubscribeLocalEvent<PullableComponent, StrappedEvent>(OnBuckled);
-        SubscribeLocalEvent<PullableComponent, BuckledEvent>(OnGotBuckled);
-
         CommandBinds.Builder
             .Bind(ContentKeyFunctions.ReleasePulledObject, InputCmdHandler.FromDelegate(OnReleasePulledObject, handle: false))
             .Register<PullingSystem>();
-    }
-
-    private void OnBuckled(Entity<PullableComponent> ent, ref StrappedEvent args)
-    {
-        // Prevent people from pulling the entity they are buckled to
-        if (ent.Comp.Puller == args.Buckle.Owner && !args.Buckle.Comp.PullStrap)
-            StopPulling(ent, ent);
-    }
-
-    private void OnGotBuckled(Entity<PullableComponent> ent, ref BuckledEvent args)
-    {
-        StopPulling(ent, ent);
     }
 
     private void OnAfterState(Entity<PullerComponent> ent, ref AfterAutoHandleStateEvent args)
@@ -106,8 +94,7 @@ public sealed class PullingSystem : EntitySystem
 
     private void OnPullerContainerInsert(Entity<PullerComponent> ent, ref EntGotInsertedIntoContainerMessage args)
     {
-        if (ent.Comp.Pulling == null)
-            return;
+        if (ent.Comp.Pulling == null) return;
 
         if (!TryComp(ent.Comp.Pulling.Value, out PullableComponent? pulling))
             return;
@@ -241,18 +228,8 @@ public sealed class PullingSystem : EntitySystem
     /// </summary>
     private void StopPulling(EntityUid pullableUid, PullableComponent pullableComp)
     {
-        if (pullableComp.Puller == null)
-            return;
-
         if (!_timing.ApplyingState)
         {
-            // Joint shutdown
-            if (pullableComp.PullJointId != null)
-            {
-                _joints.RemoveJoint(pullableUid, pullableComp.PullJointId);
-                pullableComp.PullJointId = null;
-            }
-
             if (TryComp<PhysicsComponent>(pullableUid, out var pullablePhysics))
             {
                 _physics.SetFixedRotation(pullableUid, pullableComp.PrevFixedRotation, body: pullablePhysics);
@@ -353,6 +330,15 @@ public sealed class PullingSystem : EntitySystem
             return false;
         }
 
+        if (EntityManager.TryGetComponent(puller, out BuckleComponent? buckle))
+        {
+            // Prevent people pulling the chair they're on, etc.
+            if (buckle is { PullStrap: false, Buckled: true } && (buckle.LastEntityBuckledTo == pullableUid))
+            {
+                return false;
+            }
+        }
+
         var getPulled = new BeingPulledAttemptEvent(puller, pullableUid);
         RaiseLocalEvent(pullableUid, getPulled, true);
         var startPull = new StartPullAttemptEvent(puller, pullableUid);
@@ -396,8 +382,11 @@ public sealed class PullingSystem : EntitySystem
         if (!CanPull(pullerUid, pullableUid))
             return false;
 
-        if (!HasComp<PhysicsComponent>(pullerUid) || !TryComp(pullableUid, out PhysicsComponent? pullablePhysics))
+        if (!EntityManager.TryGetComponent<PhysicsComponent>(pullerUid, out var pullerPhysics) ||
+            !EntityManager.TryGetComponent<PhysicsComponent>(pullableUid, out var pullablePhysics))
+        {
             return false;
+        }
 
         // Ensure that the puller is not currently pulling anything.
         if (TryComp<PullableComponent>(pullerComp.Pulling, out var oldPullable)
@@ -442,7 +431,7 @@ public sealed class PullingSystem : EntitySystem
         {
             // Joint startup
             var union = _physics.GetHardAABB(pullerUid).Union(_physics.GetHardAABB(pullableUid, body: pullablePhysics));
-            var length = Math.Max(union.Size.X, union.Size.Y) * 0.75f;
+            var length = Math.Max((float) union.Size.X, (float) union.Size.Y) * 0.75f;
 
             var joint = _joints.CreateDistanceJoint(pullableUid, pullerUid, id: pullableComp.PullJointId);
             joint.CollideConnected = false;
@@ -485,6 +474,17 @@ public sealed class PullingSystem : EntitySystem
 
         if (msg.Cancelled)
             return false;
+
+        // Stop pulling confirmed!
+        if (!_timing.ApplyingState)
+        {
+            // Joint shutdown
+            if (pullable.PullJointId != null)
+            {
+                _joints.RemoveJoint(pullableUid, pullable.PullJointId);
+                pullable.PullJointId = null;
+            }
+        }
 
         StopPulling(pullableUid, pullable);
         return true;
